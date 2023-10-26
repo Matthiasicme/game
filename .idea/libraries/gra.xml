@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="gra">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/out/artifacts/gra_jar/gra.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
