@@ -121,7 +121,7 @@ JPanel htpPanel;
     public void actionPerformed(ActionEvent e) {
         if(e.getSource()==play){
             this.dispose();
-            Game gameinterface = new Game();
+            Game Game = new Game();
         }
         if(e.getSource()==goBack){
             this.dispose();

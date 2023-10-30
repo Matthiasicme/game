@@ -90,11 +90,11 @@ public class Interface extends JFrame implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         if(e.getSource()==playbio){
             this.dispose();
-            Menubiol gameinterfacebio = new Menubiol();
+            Menubiol Menubiol = new Menubiol();
         }
         if(e.getSource()==playchem){
             this.dispose();
-            Menu gameinterfacechem = new Menu();
+            Menu Menu = new Menu();
         }
         if (e.getSource()==close){
             this.dispose();
