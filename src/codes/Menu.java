@@ -38,12 +38,14 @@ JLabel htpLabel;
 
 JPanel htpPanel;
 
+
     /**
      *
      * W konstruktorze Menu zapisany został nowy label odpowiedzialny za tło, parametry i właściwości paneli,
      * przycisków i labeli z klasy Menu. zapisałem w nim również parametry tego frame-u i dodałem do niego
      * wszystkie panele, labele i przyciski oraz logo znajdujące się na samym dole.
      *
+     * @param
      */
     public Menu() {
         ImageIcon background = new ImageIcon("src/resources/INTERFACE.png");
