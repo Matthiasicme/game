@@ -82,10 +82,10 @@ public class Funcell extends JFrame implements ActionListener {
     JLabel golgiApparatusLabelGreen;
 
     JButton goBack;
-    String przekazac;
+    String passone;
 
-    public Funcell(String przekazac) {
-        this.przekazac = przekazac;
+    public Funcell(String passone) {
+        this.passone = passone;
         ImageIcon background = new ImageIcon("src/resources/FUNCELL.png");
         JLabel label = new JLabel();
         label.setIcon(background);
@@ -683,7 +683,7 @@ public class Funcell extends JFrame implements ActionListener {
 
         if(e.getSource()==goBack){
             this.dispose();
-            Menubiol Menubiol = new Menubiol(przekazac);
+            Menubiol Menubiol = new Menubiol(passone);
         }
         if(e.getSource()==nucleusButton){
             nucleusPanelDescription.setVisible(true);

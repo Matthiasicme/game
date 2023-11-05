@@ -82,10 +82,10 @@ public class Baccell extends JFrame implements ActionListener {
     JLabel flagellaLabelGreen;
 
     JButton goBack;
-    String przekaz_3;
+    String pass2;
 
-    public Baccell(String przekaz_3) {
-        this.przekaz_3 = przekaz_3;
+    public Baccell(String pass2) {
+        this.pass2 = pass2;
         ImageIcon background = new ImageIcon("src/resources/BACCELL.png");
         JLabel label = new JLabel();
         label.setIcon(background);
@@ -676,7 +676,7 @@ public class Baccell extends JFrame implements ActionListener {
 
         if(e.getSource()==goBack){
             this.dispose();
-            Menubiol Menubiol = new Menubiol(przekaz_3);
+            Menubiol Menubiol = new Menubiol(pass2);
         }
         if(e.getSource()==fimbriaeButton){
             fimbriaePanelDescription.setVisible(true);
