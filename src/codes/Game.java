@@ -143,6 +143,7 @@ JPanel wynik41;
 JLabel wynik41label;
 JPanel wynik42;
 JLabel wynik42label;
+String przekazanie;
 
     /**
      *
@@ -150,7 +151,8 @@ JLabel wynik42label;
      * przycisków i labeli z klasy Game. Zapisałem w nim również parametry tego frame-u i dodałem do niego
      * wszystkie panele, labele i przyciski oraz logo znajdujące się na samym dole.
      */
-    public Game(){
+    public Game(String przekazanie){
+        this.przekazanie = przekazanie;
 
         //LABELE
 
@@ -1366,7 +1368,7 @@ JLabel wynik42label;
         }
         if (e.getSource()==menubutton){
             this.dispose();
-            Menu Menu = new Menu();
+            Menu Menu = new Menu(przekazanie);
         }
 
     }

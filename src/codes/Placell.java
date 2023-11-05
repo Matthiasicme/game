@@ -121,8 +121,10 @@ public class Placell extends JFrame implements ActionListener {
     JLabel chloroplastLabelGreen;
 
     JButton goBack;
+    String przekaz_2;
 
-    public Placell() {
+    public Placell(String przekaz_2) {
+        this.przekaz_2 = przekaz_2;
         ImageIcon background = new ImageIcon("src/resources/PLACELL.png");
         JLabel label = new JLabel();
         label.setIcon(background);
@@ -1027,7 +1029,7 @@ public class Placell extends JFrame implements ActionListener {
 
         if(e.getSource()==goBack){
             this.dispose();
-            Menubiol Menubiol = new Menubiol();
+            Menubiol Menubiol = new Menubiol(przekaz_2);
         }
         if(e.getSource()==nucleusButton){
             nucleusPanelDescription.setVisible(true);

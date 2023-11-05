@@ -9,6 +9,6 @@ public class Main {
         public static void main(String[] args) {
 
                 //Placell Placell = new Placell();
-                Interface Interface = new Interface();
+                Interface Interface = new Interface(false, null);
         }
 }

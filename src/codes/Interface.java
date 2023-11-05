@@ -45,20 +45,21 @@ public class Interface extends JFrame implements ActionListener {
      *
      */
     boolean nameInput = false;
-    String name = null;
+    public String name;
+    String username;
 
-    public Interface() {
+    public Interface(boolean is_name, String username) {
+        this.username = username;
         ImageIcon background = new ImageIcon("src/resources/maininterface.png");
         JLabel label = new JLabel();
         label.setIcon(background);
-
-
+        nameInput = is_name;
 
         if (!nameInput) {
             name = JOptionPane.showInputDialog(null, "Hello, what is your name?", "Introduce Yourself", JOptionPane.QUESTION_MESSAGE);
             nameInput = true;
-        }
-        
+        }else name= username;
+
         intro = new JPanel();
         intro.setVisible(true);
         intro.setBounds(100,170,530,70);
@@ -116,11 +117,11 @@ public class Interface extends JFrame implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         if(e.getSource()==playbio){
             this.dispose();
-            Menubiol Menubiol = new Menubiol();
+            Menubiol Menubiol = new Menubiol(name);
         }
         if(e.getSource()==playchem){
             this.dispose();
-            Menu Menu = new Menu();
+            Menu Menu = new Menu(name);
         }
         if (e.getSource()==close){
             this.dispose();

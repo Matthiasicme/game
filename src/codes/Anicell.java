@@ -106,8 +106,10 @@ public class Anicell extends JFrame implements ActionListener {
     JLabel lysosomeLabelGreen;
 
     JButton goBack;
+    String przekaz_47;
 
-    public Anicell() {
+    public Anicell(String przekaz_47) {
+        this.przekaz_47 = przekaz_47;
         ImageIcon background = new ImageIcon("src/resources/ANICELL.png");
         JLabel label = new JLabel();
         label.setIcon(background);
@@ -892,7 +894,7 @@ public class Anicell extends JFrame implements ActionListener {
 
         if(e.getSource()==goBack){
             this.dispose();
-            Menubiol Menubiol = new Menubiol();
+            Menubiol Menubiol = new Menubiol(przekaz_47);
         }
         if(e.getSource()==nucleusButton){
             nucleusPanelDescription.setVisible(true);

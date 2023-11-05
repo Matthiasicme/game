@@ -37,7 +37,7 @@ JButton htpGoBack;
 JLabel htpLabel;
 
 JPanel htpPanel;
-
+String przekazanie;
 
     /**
      *
@@ -47,7 +47,8 @@ JPanel htpPanel;
      *
      * @param
      */
-    public Menu() {
+    public Menu(String przekazanie) {
+        this.przekazanie = przekazanie;
         ImageIcon background = new ImageIcon("src/resources/INTERFACE.png");
         JLabel label = new JLabel();
         label.setIcon(background);
@@ -123,11 +124,11 @@ JPanel htpPanel;
     public void actionPerformed(ActionEvent e) {
         if(e.getSource()==play){
             this.dispose();
-            Game Game = new Game();
+            Game Game = new Game(przekazanie);
         }
         if(e.getSource()==goBack){
             this.dispose();
-            Interface Interface = new Interface();
+            Interface Interface = new Interface(true, przekazanie);
         }
         if (e.getSource()==htpButton){
             htpPanel.setVisible(true);

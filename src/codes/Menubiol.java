@@ -34,6 +34,7 @@ public class Menubiol extends JFrame implements ActionListener {
     JButton placell;
     JButton anicell;
     JButton goBack;
+    String przekazanie;
 
 
     /**
@@ -44,7 +45,8 @@ public class Menubiol extends JFrame implements ActionListener {
      *
      * @param
      */
-    public Menubiol() {
+    public Menubiol(String przekazanie) {
+        this.przekazanie = przekazanie;
         ImageIcon background = new ImageIcon("src/resources/BIOINTERFACE.png");
         JLabel label = new JLabel();
         label.setIcon(background);
@@ -109,23 +111,23 @@ public class Menubiol extends JFrame implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         if(e.getSource()==baccell){
             this.dispose();
-            Baccell Baccell = new Baccell();
+            Baccell Baccell = new Baccell(przekazanie);
         }
         if(e.getSource()==funcell){
             this.dispose();
-            Funcell Funcell = new Funcell();
+            Funcell Funcell = new Funcell(przekazanie);
         }
         if(e.getSource()==placell){
             this.dispose();
-            Placell Placell = new Placell();
+            Placell Placell = new Placell(przekazanie);
         }
         if(e.getSource()==anicell){
             this.dispose();
-            Anicell Anicell = new Anicell();
+            Anicell Anicell = new Anicell(przekazanie);
         }
         if(e.getSource()==goBack){
             this.dispose();
-            Interface Interface = new Interface();
+            Interface Interface = new Interface(true, przekazanie);
         }
 
     }
