@@ -46,6 +46,7 @@ public class Interface extends JFrame implements ActionListener {
      */
     boolean nameInput = false;
     String name = null;
+
     public Interface() {
         ImageIcon background = new ImageIcon("src/resources/maininterface.png");
         JLabel label = new JLabel();
