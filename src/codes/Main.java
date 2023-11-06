@@ -8,7 +8,7 @@ public class Main {
          */
         public static void main(String[] args) {
 
-                //Placell Placell = new Placell();
-                Interface Interface = new Interface(false, null);
+                Placell Placell = new Placell(null);
+                //Interface Interface = new Interface(false, null);
         }
 }

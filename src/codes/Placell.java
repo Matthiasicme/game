@@ -79,6 +79,9 @@ public class Placell extends JFrame implements ActionListener {
     JLabel roughEndoplasmicReticulumLabelDescription;
     JButton roughEndoplasmicReticulumPanelClose;
     JLabel roughEndoplasmicReticulumLabelGreen;
+    JButton roughEndoplasmicReticulum1;
+    JButton roughEndoplasmicReticulum2;
+    JButton roughEndoplasmicReticulum3;
 
     JPanel golgiApparatusPanel;
     JLabel golgiApparatusLabel;
@@ -111,6 +114,8 @@ public class Placell extends JFrame implements ActionListener {
     JLabel plasmodesmataLabelDescription;
     JButton plasmodesmataPanelClose;
     JLabel plasmodesmataLabelGreen;
+    JButton plasmodesmata1;
+    JButton plasmodesmata2;
 
     JPanel chloroplastPanel;
     JLabel chloroplastLabel;
@@ -623,6 +628,27 @@ public class Placell extends JFrame implements ActionListener {
         roughEndoplasmicReticulumPanelClose.setBorderPainted(false);
         roughEndoplasmicReticulumPanelClose.addActionListener(this);
 
+        roughEndoplasmicReticulum1 = new JButton();
+        roughEndoplasmicReticulum1.setBounds(475,435,270,110);
+        roughEndoplasmicReticulum1.setOpaque(false);
+        roughEndoplasmicReticulum1.setContentAreaFilled(false);
+        roughEndoplasmicReticulum1.setBorderPainted(true);
+        roughEndoplasmicReticulum1.addActionListener(this);
+
+        roughEndoplasmicReticulum2 = new JButton();
+        roughEndoplasmicReticulum2.setBounds(485,545,220,30);
+        roughEndoplasmicReticulum2.setOpaque(false);
+        roughEndoplasmicReticulum2.setContentAreaFilled(false);
+        roughEndoplasmicReticulum2.setBorderPainted(true);
+        roughEndoplasmicReticulum2.addActionListener(this);
+
+        roughEndoplasmicReticulum3 = new JButton();
+        roughEndoplasmicReticulum3.setBounds(745,435,45,60);
+        roughEndoplasmicReticulum3.setOpaque(false);
+        roughEndoplasmicReticulum3.setContentAreaFilled(false);
+        roughEndoplasmicReticulum3.setBorderPainted(true);
+        roughEndoplasmicReticulum3.addActionListener(this);
+
         golgiApparatusPanel = new JPanel();
         golgiApparatusPanel.setVisible(true);
         golgiApparatusPanel.setBounds(930,510,280,40);
@@ -847,6 +873,20 @@ public class Placell extends JFrame implements ActionListener {
         plasmodesmataPanelClose.setBorderPainted(false);
         plasmodesmataPanelClose.addActionListener(this);
 
+        plasmodesmata1 = new JButton();
+        plasmodesmata1.setBounds(560,700,240,160);
+        plasmodesmata1.setOpaque(false);
+        plasmodesmata1.setContentAreaFilled(false);
+        plasmodesmata1.setBorderPainted(true);
+        plasmodesmata1.addActionListener(this);
+
+        plasmodesmata2 = new JButton();
+        plasmodesmata2.setBounds(280,810,105,90);
+        plasmodesmata2.setOpaque(false);
+        plasmodesmata2.setContentAreaFilled(false);
+        plasmodesmata2.setBorderPainted(true);
+        plasmodesmata2.addActionListener(this);
+
         chloroplastPanel = new JPanel();
         chloroplastPanel.setVisible(true);
         chloroplastPanel.setBounds(930,670,280,40);
@@ -980,6 +1020,9 @@ public class Placell extends JFrame implements ActionListener {
         this.add(roughEndoplasmicReticulumPanelDescription);
         roughEndoplasmicReticulumPanelDescription.add(roughEndoplasmicReticulumPanelClose);
         roughEndoplasmicReticulumPanelDescription.add(roughEndoplasmicReticulumLabelDescription);
+        this.add(roughEndoplasmicReticulum1);
+        this.add(roughEndoplasmicReticulum2);
+        this.add(roughEndoplasmicReticulum3);
 
         this.add(golgiApparatusPanel);
         golgiApparatusPanel.add(golgiApparatusLabel);
@@ -1008,6 +1051,8 @@ public class Placell extends JFrame implements ActionListener {
         this.add(plasmodesmataPanelDescription);
         plasmodesmataPanelDescription.add(plasmodesmataPanelClose);
         plasmodesmataPanelDescription.add(plasmodesmataLabelDescription);
+        this.add(plasmodesmata1);
+        this.add(plasmodesmata2);
         
         this.add(chloroplastPanel);
         chloroplastPanel.add(chloroplastLabel);
@@ -1132,6 +1177,15 @@ public class Placell extends JFrame implements ActionListener {
             roughEndoplasmicReticulumLabelGreen.setOpaque(true);
             roughEndoplasmicReticulumPanel.add(roughEndoplasmicReticulumLabelGreen);
         }
+        if(e.getSource()==roughEndoplasmicReticulum1){
+            roughEndoplasmicReticulumPanelDescription.setVisible(true);
+        }
+        if(e.getSource()==roughEndoplasmicReticulum2){
+            roughEndoplasmicReticulumPanelDescription.setVisible(true);
+        }
+        if(e.getSource()==roughEndoplasmicReticulum3){
+            roughEndoplasmicReticulumPanelDescription.setVisible(true);
+        }
         if(e.getSource()==golgiApparatusButton){
             golgiApparatusPanelDescription.setVisible(true);
         }
@@ -1171,6 +1225,12 @@ public class Placell extends JFrame implements ActionListener {
             plasmodesmataLabelGreen.setVisible(true);
             plasmodesmataLabelGreen.setOpaque(true);
             plasmodesmataPanel.add(plasmodesmataLabelGreen);
+        }
+        if(e.getSource()==plasmodesmata1){
+            plasmodesmataPanelDescription.setVisible(true);
+        }
+        if(e.getSource()==plasmodesmata2){
+            plasmodesmataPanelDescription.setVisible(true);
         }
         if(e.getSource()==chloroplastButton){
             chloroplastPanelDescription.setVisible(true);
