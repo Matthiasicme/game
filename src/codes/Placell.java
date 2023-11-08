@@ -170,7 +170,7 @@ public class Placell extends JFrame implements ActionListener {
         label.setIcon(background);
 
         Border border = BorderFactory.createLineBorder(Color.BLUE, 1);
-        //Border bb = BorderFactory.createLineBorder(Color.RED, 1);
+        Border bb = BorderFactory.createLineBorder(Color.RED, 1);
 
         progressBar.setValue(0);
         progressBar.setBounds(390,120,500,50);
@@ -179,6 +179,7 @@ public class Placell extends JFrame implements ActionListener {
         progressBar.setBorderPainted(true);
         progressBar.setBorder(border);
         progressBar.setForeground(Color.green);
+        progressBar.setBackground(Color.RED);
         //progressBar.setOrientation(JProgressBar.VERTICAL);
 
         nucleusPanel = new JPanel();

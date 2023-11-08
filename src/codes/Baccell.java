@@ -16,6 +16,8 @@ public class Baccell extends JFrame implements ActionListener {
     JLabel fimbriaeLabelDescription;
     JButton fimbriaePanelClose;
     JLabel fimbriaeLabelGreen;
+    JButton fimbriae1;
+    JButton fimbriae2;
 
     JPanel nucleoidPanel;
     JLabel nucleoidLabel;
@@ -24,6 +26,7 @@ public class Baccell extends JFrame implements ActionListener {
     JLabel nucleoidLabelDescription;
     JButton nucleoidPanelClose;
     JLabel nucleoidLabelGreen;
+    JButton nucleoid1;
     
     JPanel ribosomesPanel;
     JLabel ribosomesLabel;
@@ -56,6 +59,7 @@ public class Baccell extends JFrame implements ActionListener {
     JLabel plasmidLabelDescription;
     JButton plasmidPanelClose;
     JLabel plasmidLabelGreen;
+    JButton plasmid1;
     
     JPanel cellulosePanel;
     JLabel celluloseLabel;
@@ -80,9 +84,16 @@ public class Baccell extends JFrame implements ActionListener {
     JLabel flagellaLabelDescription;
     JButton flagellaPanelClose;
     JLabel flagellaLabelGreen;
+    JButton flagella1;
+    JButton flagella2;
+    JButton flagella3;
+    JButton flagella4;
+    JButton flagella5;
 
     JButton goBack;
     String pass2;
+    JProgressBar progressBar = new JProgressBar();
+    int i=0;
 
     public Baccell(String pass2) {
         this.pass2 = pass2;
@@ -90,7 +101,19 @@ public class Baccell extends JFrame implements ActionListener {
         JLabel label = new JLabel();
         label.setIcon(background);
 
-        //Border border = BorderFactory.createLineBorder(Color.green, 5);
+        Border border = BorderFactory.createLineBorder(Color.BLUE, 1);
+        Border bb = BorderFactory.createLineBorder(Color.RED, 1);
+
+        progressBar.setValue(0);
+        progressBar.setBounds(390,120,500,50);
+        progressBar.setStringPainted(true);
+        //progressBar.setString("Level");
+        progressBar.setBorderPainted(true);
+        progressBar.setBorder(border);
+        progressBar.setForeground(Color.green);
+        progressBar.setBackground(Color.RED);
+        //progressBar.setOrientation(JProgressBar.VERTICAL);
+
         fimbriaePanel = new JPanel();
         fimbriaePanel.setVisible(true);
         fimbriaePanel.setBounds(930,190,280,40);
@@ -146,6 +169,22 @@ public class Baccell extends JFrame implements ActionListener {
         fimbriaePanelClose.setBorderPainted(false);
         fimbriaePanelClose.addActionListener(this);
 
+        fimbriae1 = new JButton();
+        fimbriae1.setBounds(285,410,50,55);
+        fimbriae1.setOpaque(false);
+        fimbriae1.setContentAreaFilled(false);
+        fimbriae1.setBorderPainted(true);
+        fimbriae1.addActionListener(this);
+        fimbriae1.setCursor(new Cursor(Cursor.HAND_CURSOR));
+
+        fimbriae2 = new JButton();
+        fimbriae2.setBounds(150,420,110,250);
+        fimbriae2.setOpaque(false);
+        fimbriae2.setContentAreaFilled(false);
+        fimbriae2.setBorderPainted(true);
+        fimbriae2.addActionListener(this);
+        fimbriae2.setCursor(new Cursor(Cursor.HAND_CURSOR));
+
         nucleoidPanel = new JPanel();
         nucleoidPanel.setVisible(true);
         nucleoidPanel.setBounds(930,230,280,40);
@@ -199,7 +238,15 @@ public class Baccell extends JFrame implements ActionListener {
         nucleoidPanelClose.setIcon(porzam);
         nucleoidPanelClose.setBorderPainted(false);
         nucleoidPanelClose.addActionListener(this);
-        
+
+        nucleoid1 = new JButton();
+        nucleoid1.setBounds(450,500,270,110);
+        nucleoid1.setOpaque(false);
+        nucleoid1.setContentAreaFilled(false);
+        nucleoid1.setBorderPainted(true);
+        nucleoid1.addActionListener(this);
+        nucleoid1.setCursor(new Cursor(Cursor.HAND_CURSOR));
+
         ribosomesPanel = new JPanel();
         ribosomesPanel.setVisible(true);
         ribosomesPanel.setBounds(930,270,280,40);
@@ -420,7 +467,15 @@ public class Baccell extends JFrame implements ActionListener {
         plasmidPanelClose.setIcon(porzam);
         plasmidPanelClose.setBorderPainted(false);
         plasmidPanelClose.addActionListener(this);
-        
+
+        plasmid1 = new JButton();
+        plasmid1.setBounds(745,480,80,50);
+        plasmid1.setOpaque(false);
+        plasmid1.setContentAreaFilled(false);
+        plasmid1.setBorderPainted(true);
+        plasmid1.addActionListener(this);
+        plasmid1.setCursor(new Cursor(Cursor.HAND_CURSOR));
+
         cellulosePanel = new JPanel();
         cellulosePanel.setVisible(true);
         cellulosePanel.setBounds(930,430,280,40);
@@ -585,6 +640,47 @@ public class Baccell extends JFrame implements ActionListener {
         flagellaPanelClose.setBorderPainted(false);
         flagellaPanelClose.addActionListener(this);
 
+        flagella1 = new JButton();
+        flagella1.setBounds(80,230,440,140);
+        flagella1.setOpaque(false);
+        flagella1.setContentAreaFilled(false);
+        flagella1.setBorderPainted(true);
+        flagella1.addActionListener(this);
+        flagella1.setCursor(new Cursor(Cursor.HAND_CURSOR));
+
+        flagella2 = new JButton();
+        flagella2.setBounds(80,370,70,170);
+        flagella2.setOpaque(false);
+        flagella2.setContentAreaFilled(false);
+        flagella2.setBorderPainted(true);
+        flagella2.addActionListener(this);
+        flagella2.setCursor(new Cursor(Cursor.HAND_CURSOR));
+
+        flagella3 = new JButton();
+        flagella3.setBounds(400,370,120,60);
+        flagella3.setOpaque(false);
+        flagella3.setContentAreaFilled(false);
+        flagella3.setBorderPainted(true);
+        flagella3.addActionListener(this);
+        flagella3.setCursor(new Cursor(Cursor.HAND_CURSOR));
+
+        flagella4 = new JButton();
+        flagella4.setBounds(190,680,140,200);
+        flagella4.setOpaque(false);
+        flagella4.setContentAreaFilled(false);
+        flagella4.setBorderPainted(true);
+        flagella4.addActionListener(this);
+        flagella4.setCursor(new Cursor(Cursor.HAND_CURSOR));
+
+        flagella5 = new JButton();
+        flagella5.setBounds(330,800,400,150);
+        flagella5.setOpaque(false);
+        flagella5.setContentAreaFilled(false);
+        flagella5.setBorderPainted(true);
+        flagella5.addActionListener(this);
+        flagella5.setCursor(new Cursor(Cursor.HAND_CURSOR));
+        flagella5.setBorder(bb);
+
         goBack = new JButton();
         goBack.setBounds(1060,900,120,40);
         goBack.setOpaque(false);
@@ -606,13 +702,16 @@ public class Baccell extends JFrame implements ActionListener {
         this.add(fimbriaePanelDescription);
         fimbriaePanelDescription.add(fimbriaePanelClose);
         fimbriaePanelDescription.add(fimbriaeLabelDescription);
-        
+        this.add(fimbriae1);
+        this.add(fimbriae2);
+
         this.add(nucleoidPanel);
         nucleoidPanel.add(nucleoidLabel);
         this.add(nucleoidButton);
         this.add(nucleoidPanelDescription);
         nucleoidPanelDescription.add(nucleoidPanelClose);
-        nucleoidPanelDescription.add(nucleoidLabelDescription); 
+        nucleoidPanelDescription.add(nucleoidLabelDescription);
+        this.add(nucleoid1);
         
         this.add(ribosomesPanel);
         ribosomesPanel.add(ribosomesLabel);
@@ -641,6 +740,7 @@ public class Baccell extends JFrame implements ActionListener {
         this.add(plasmidPanelDescription);
         plasmidPanelDescription.add(plasmidPanelClose);
         plasmidPanelDescription.add(plasmidLabelDescription);
+        this.add(plasmid1);
         
         this.add(cellulosePanel);
         cellulosePanel.add(celluloseLabel);
@@ -662,8 +762,13 @@ public class Baccell extends JFrame implements ActionListener {
         this.add(flagellaPanelDescription);
         flagellaPanelDescription.add(flagellaPanelClose);
         flagellaPanelDescription.add(flagellaLabelDescription);
+        this.add(flagella1);
+        this.add(flagella2);
+        this.add(flagella3);
+        this.add(flagella4);
+        this.add(flagella5);
 
-
+        this.add(progressBar);
         this.add(label);
 
         ImageIcon logo = new ImageIcon("src/resources/logo.jpg");
@@ -682,26 +787,44 @@ public class Baccell extends JFrame implements ActionListener {
             fimbriaePanelDescription.setVisible(true);
         }
         if(e.getSource()==fimbriaePanelClose){
+            if(!fimbriaeLabelGreen.isVisible()){
+                progressBar.setValue(i=i+12);
+            }
             fimbriaePanelDescription.setVisible(false);
             fimbriaeLabel.setVisible(false);
             fimbriaeLabelGreen.setVisible(true);
             fimbriaeLabelGreen.setOpaque(true);
             fimbriaePanel.add(fimbriaeLabelGreen);
         }
+        if(e.getSource()==fimbriae1){
+            fimbriaePanelDescription.setVisible(true);
+        }
+        if(e.getSource()==fimbriae2){
+            fimbriaePanelDescription.setVisible(true);
+        }
         if(e.getSource()==nucleoidButton){
             nucleoidPanelDescription.setVisible(true);
         }
         if(e.getSource()==nucleoidPanelClose){
+            if(!nucleoidLabelGreen.isVisible()){
+                progressBar.setValue(i=i+11);
+            }
             nucleoidPanelDescription.setVisible(false);
             nucleoidLabel.setVisible(false);
             nucleoidLabelGreen.setVisible(true);
             nucleoidLabelGreen.setOpaque(true);
             nucleoidPanel.add(nucleoidLabelGreen);
         }
+        if(e.getSource()==nucleoid1){
+            nucleoidPanelDescription.setVisible(true);
+        }
         if(e.getSource()==ribosomesButton){
             ribosomesPanelDescription.setVisible(true);
         }
         if(e.getSource()==ribosomesPanelClose){
+            if(!ribosomesLabelGreen.isVisible()){
+                progressBar.setValue(i=i+11);
+            }
             ribosomesPanelDescription.setVisible(false);
             ribosomesLabel.setVisible(false);
             ribosomesLabelGreen.setVisible(true);
@@ -712,6 +835,9 @@ public class Baccell extends JFrame implements ActionListener {
             plasmaMembranePanelDescription.setVisible(true);
         }
         if(e.getSource()==plasmaMembranePanelClose){
+            if(!plasmaMembraneLabelGreen.isVisible()){
+                progressBar.setValue(i=i+11);
+            }
             plasmaMembranePanelDescription.setVisible(false);
             plasmaMembraneLabel.setVisible(false);
             plasmaMembraneLabelGreen.setVisible(true);
@@ -722,6 +848,9 @@ public class Baccell extends JFrame implements ActionListener {
             cellWallPanelDescription.setVisible(true);
         }
         if(e.getSource()==cellWallPanelClose){
+            if(!cellWallLabelGreen.isVisible()){
+                progressBar.setValue(i=i+11);
+            }
             cellWallPanelDescription.setVisible(false);
             cellWallLabel.setVisible(false);
             cellWallLabelGreen.setVisible(true);
@@ -732,16 +861,25 @@ public class Baccell extends JFrame implements ActionListener {
             plasmidPanelDescription.setVisible(true);
         }
         if(e.getSource()==plasmidPanelClose){
+            if(!plasmidLabelGreen.isVisible()){
+                progressBar.setValue(i=i+11);
+            }
             plasmidPanelDescription.setVisible(false);
             plasmidLabel.setVisible(false);
             plasmidLabelGreen.setVisible(true);
             plasmidLabelGreen.setOpaque(true);
             plasmidPanel.add(plasmidLabelGreen);
         }
+        if(e.getSource()==plasmid1){
+            plasmidPanelDescription.setVisible(true);
+        }
         if(e.getSource()==celluloseButton){
             cellulosePanelDescription.setVisible(true);
         }
         if(e.getSource()==cellulosePanelClose){
+            if(!celluloseLabelGreen.isVisible()){
+                progressBar.setValue(i=i+11);
+            }
             cellulosePanelDescription.setVisible(false);
             celluloseLabel.setVisible(false);
             celluloseLabelGreen.setVisible(true);
@@ -752,6 +890,9 @@ public class Baccell extends JFrame implements ActionListener {
             capsulePanelDescription.setVisible(true);
         }
         if(e.getSource()==capsulePanelClose){
+            if(!capsuleLabelGreen.isVisible()){
+                progressBar.setValue(i=i+11);
+            }
             capsulePanelDescription.setVisible(false);
             capsuleLabel.setVisible(false);
             capsuleLabelGreen.setVisible(true);
@@ -762,11 +903,29 @@ public class Baccell extends JFrame implements ActionListener {
             flagellaPanelDescription.setVisible(true);
         }
         if(e.getSource()==flagellaPanelClose){
+            if(!flagellaLabelGreen.isVisible()){
+                progressBar.setValue(i=i+11);
+            }
             flagellaPanelDescription.setVisible(false);
             flagellaLabel.setVisible(false);
             flagellaLabelGreen.setVisible(true);
             flagellaLabelGreen.setOpaque(true);
             flagellaPanel.add(flagellaLabelGreen);
+        }
+        if(e.getSource()==flagella1){
+            flagellaPanelDescription.setVisible(true);
+        }
+        if(e.getSource()==flagella2){
+            flagellaPanelDescription.setVisible(true);
+        }
+        if(e.getSource()==flagella3){
+            flagellaPanelDescription.setVisible(true);
+        }
+        if(e.getSource()==flagella4){
+            flagellaPanelDescription.setVisible(true);
+        }
+        if(e.getSource()==flagella5){
+            flagellaPanelDescription.setVisible(true);
         }
     }
 }
