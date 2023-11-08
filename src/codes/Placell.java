@@ -28,6 +28,7 @@ public class Placell extends JFrame implements ActionListener {
     JButton mitochondrion1;
     JButton mitochondrion2;
     JButton mitochondrion3;
+    JButton mitochondrion4;
 
     JPanel ribosomesPanel;
     JLabel ribosomesLabel;
@@ -36,6 +37,19 @@ public class Placell extends JFrame implements ActionListener {
     JLabel ribosomesLabelDescription;
     JButton ribosomesPanelClose;
     JLabel ribosomesLabelGreen;
+    JButton ribosomes1;
+    JButton ribosomes2;
+    JButton ribosomes3;
+    JButton ribosomes4;
+    JButton ribosomes5;
+    JButton ribosomes6;
+    JButton ribosomes7;
+    JButton ribosomes8;
+    JButton ribosomes9;
+    JButton ribosomes10;
+    JButton ribosomes11;
+    JButton ribosomes12;
+    JButton ribosomes13;
 
     JPanel plasmaMembranePanel;
     JLabel plasmaMembraneLabel;
@@ -52,6 +66,15 @@ public class Placell extends JFrame implements ActionListener {
     JLabel cellWallLabelDescription;
     JButton cellWallPanelClose;
     JLabel cellWallLabelGreen;
+    JButton cellWall1;
+    JButton cellWall2;
+    JButton cellWall3;
+    JButton cellWall4;
+    JButton cellWall5;
+    JButton cellWall6;
+    JButton cellWall7;
+    JButton cellWall8;
+    JButton cellWall9;
 
     JPanel vacuolePanel;
     JLabel vacuoleLabel;
@@ -90,6 +113,9 @@ public class Placell extends JFrame implements ActionListener {
     JLabel golgiApparatusLabelDescription;
     JButton golgiApparatusPanelClose;
     JLabel golgiApparatusLabelGreen;
+    JButton golgiApparatus1;
+    JButton golgiApparatus2;
+    JButton golgiApparatus3;
 
     JPanel cytoskeletonPanel;
     JLabel cytoskeletonLabel;
@@ -98,6 +124,8 @@ public class Placell extends JFrame implements ActionListener {
     JLabel cytoskeletonLabelDescription;
     JButton cytoskeletonPanelClose;
     JLabel cytoskeletonLabelGreen;
+    JButton cytoskeleton1;
+    JButton cytoskeleton2;
 
     JPanel peroxisomePanel;
     JLabel peroxisomeLabel;
@@ -106,6 +134,10 @@ public class Placell extends JFrame implements ActionListener {
     JLabel peroxisomeLabelDescription;
     JButton peroxisomePanelClose;
     JLabel peroxisomeLabelGreen;
+    JButton peroxisome1;
+    JButton peroxisome2;
+    JButton peroxisome3;
+    JButton peroxisome4;
 
     JPanel plasmodesmataPanel;
     JLabel plasmodesmataLabel;
@@ -124,9 +156,12 @@ public class Placell extends JFrame implements ActionListener {
     JLabel chloroplastLabelDescription;
     JButton chloroplastPanelClose;
     JLabel chloroplastLabelGreen;
+    JButton chloroplast1;
 
     JButton goBack;
     String pass3;
+    JProgressBar progressBar = new JProgressBar();
+    int i=0;
 
     public Placell(String pass3) {
         this.pass3 = pass3;
@@ -134,10 +169,21 @@ public class Placell extends JFrame implements ActionListener {
         JLabel label = new JLabel();
         label.setIcon(background);
 
-        //Border border = BorderFactory.createLineBorder(Color.green, 5);
+        Border border = BorderFactory.createLineBorder(Color.BLUE, 1);
+        //Border bb = BorderFactory.createLineBorder(Color.RED, 1);
+
+        progressBar.setValue(0);
+        progressBar.setBounds(390,120,500,50);
+        progressBar.setStringPainted(true);
+        //progressBar.setString("Level");
+        progressBar.setBorderPainted(true);
+        progressBar.setBorder(border);
+        progressBar.setForeground(Color.green);
+        //progressBar.setOrientation(JProgressBar.VERTICAL);
+
         nucleusPanel = new JPanel();
         nucleusPanel.setVisible(true);
-        nucleusPanel.setBounds(930,190,280,40);
+        nucleusPanel.setBounds(930,190,250,40);
         nucleusPanel.setLayout(new BorderLayout());
         nucleusPanel.setBackground(new Color(0x6af6be));
         //nucleusPanel.setBorder(border);
@@ -158,7 +204,7 @@ public class Placell extends JFrame implements ActionListener {
         nucleusLabelGreen.setBackground(new Color(0x6af6be));
 
         nucleusButton = new JButton();
-        nucleusButton.setBounds(930,190,280,40);
+        nucleusButton.setBounds(930,190,250,40);
         nucleusButton.setOpaque(false);
         nucleusButton.setContentAreaFilled(false);
         nucleusButton.setBorderPainted(true);
@@ -195,15 +241,15 @@ public class Placell extends JFrame implements ActionListener {
         nucleus1.setBounds(530,217,270,220);
         nucleus1.setOpaque(false);
         nucleus1.setContentAreaFilled(false);
-        nucleus1.setBorderPainted(true);
+        nucleus1.setBorderPainted(false);
         nucleus1.addActionListener(this);
+        nucleus1.setCursor(new Cursor(Cursor.HAND_CURSOR));
 
         mitochondrionPanel = new JPanel();
         mitochondrionPanel.setVisible(true);
-        mitochondrionPanel.setBounds(930,230,280,40);
+        mitochondrionPanel.setBounds(930,230,250,40);
         mitochondrionPanel.setLayout(new BorderLayout());
         mitochondrionPanel.setBackground(new Color(0x6af6be));
-        //mitochondrionPanel.setBorder(border);
 
         mitochondrionLabel = new JLabel();
         mitochondrionLabel.setBounds(0, 0, 200, 100);
@@ -221,7 +267,7 @@ public class Placell extends JFrame implements ActionListener {
         mitochondrionLabelGreen.setBackground(new Color(0x6af6be));
 
         mitochondrionButton = new JButton();
-        mitochondrionButton.setBounds(930,230,280,40);
+        mitochondrionButton.setBounds(930,230,250,40);
         mitochondrionButton.setOpaque(false);
         mitochondrionButton.setContentAreaFilled(false);
         mitochondrionButton.setBorderPainted(true);
@@ -257,26 +303,37 @@ public class Placell extends JFrame implements ActionListener {
         mitochondrion1.setBounds(110,560,130,70);
         mitochondrion1.setOpaque(false);
         mitochondrion1.setContentAreaFilled(false);
-        mitochondrion1.setBorderPainted(true);
+        mitochondrion1.setBorderPainted(false);
         mitochondrion1.addActionListener(this);
+        mitochondrion1.setCursor(new Cursor(Cursor.HAND_CURSOR));
 
         mitochondrion2 = new JButton();
-        mitochondrion2.setBounds(280,540,120,80);
+        mitochondrion2.setBounds(280,560,100,60);
         mitochondrion2.setOpaque(false);
         mitochondrion2.setContentAreaFilled(false);
-        mitochondrion2.setBorderPainted(true);
+        mitochondrion2.setBorderPainted(false);
         mitochondrion2.addActionListener(this);
+        mitochondrion2.setCursor(new Cursor(Cursor.HAND_CURSOR));
 
         mitochondrion3 = new JButton();
         mitochondrion3.setBounds(540,580,140,73);
         mitochondrion3.setOpaque(false);
         mitochondrion3.setContentAreaFilled(false);
-        mitochondrion3.setBorderPainted(true);
+        mitochondrion3.setBorderPainted(false);
         mitochondrion3.addActionListener(this);
+        mitochondrion3.setCursor(new Cursor(Cursor.HAND_CURSOR));
+
+        mitochondrion4 = new JButton();
+        mitochondrion4.setBounds(335,532,62,54);
+        mitochondrion4.setOpaque(false);
+        mitochondrion4.setContentAreaFilled(false);
+        mitochondrion4.setBorderPainted(false);
+        mitochondrion4.addActionListener(this);
+        mitochondrion4.setCursor(new Cursor(Cursor.HAND_CURSOR));
 
         ribosomesPanel = new JPanel();
         ribosomesPanel.setVisible(true);
-        ribosomesPanel.setBounds(930,270,280,40);
+        ribosomesPanel.setBounds(930,270,250,40);
         ribosomesPanel.setLayout(new BorderLayout());
         ribosomesPanel.setBackground(new Color(0x6af6be));
         //ribosomesPanel.setBorder(border);
@@ -297,7 +354,7 @@ public class Placell extends JFrame implements ActionListener {
         ribosomesLabelGreen.setBackground(new Color(0x6af6be));
 
         ribosomesButton = new JButton();
-        ribosomesButton.setBounds(930,270,280,40);
+        ribosomesButton.setBounds(930,270,250,40);
         ribosomesButton.setOpaque(false);
         ribosomesButton.setContentAreaFilled(false);
         ribosomesButton.setBorderPainted(true);
@@ -329,9 +386,113 @@ public class Placell extends JFrame implements ActionListener {
         ribosomesPanelClose.setBorderPainted(false);
         ribosomesPanelClose.addActionListener(this);
 
+        ribosomes1 = new JButton();
+        ribosomes1.setBounds(173,534,15,20);
+        ribosomes1.setOpaque(false);
+        ribosomes1.setContentAreaFilled(false);
+        ribosomes1.setBorderPainted(false);
+        ribosomes1.addActionListener(this);
+        ribosomes1.setCursor(new Cursor(Cursor.HAND_CURSOR));
+
+        ribosomes2 = new JButton();
+        ribosomes2.setBounds(238,578,30,14);
+        ribosomes2.setOpaque(false);
+        ribosomes2.setContentAreaFilled(false);
+        ribosomes2.setBorderPainted(false);
+        ribosomes2.addActionListener(this);
+        ribosomes2.setCursor(new Cursor(Cursor.HAND_CURSOR));
+
+        ribosomes3 = new JButton();
+        ribosomes3.setBounds(253,610,20,20);
+        ribosomes3.setOpaque(false);
+        ribosomes3.setContentAreaFilled(false);
+        ribosomes3.setBorderPainted(false);
+        ribosomes3.addActionListener(this);
+        ribosomes3.setCursor(new Cursor(Cursor.HAND_CURSOR));
+
+        ribosomes4 = new JButton();
+        ribosomes4.setBounds(300,535,30,20);
+        ribosomes4.setOpaque(false);
+        ribosomes4.setContentAreaFilled(false);
+        ribosomes4.setBorderPainted(false);
+        ribosomes4.addActionListener(this);
+        ribosomes4.setCursor(new Cursor(Cursor.HAND_CURSOR));
+
+        ribosomes5 = new JButton();
+        ribosomes5.setBounds(380,595,25,20);
+        ribosomes5.setOpaque(false);
+        ribosomes5.setContentAreaFilled(false);
+        ribosomes5.setBorderPainted(false);
+        ribosomes5.addActionListener(this);
+        ribosomes5.setCursor(new Cursor(Cursor.HAND_CURSOR));
+
+        ribosomes6 = new JButton();
+        ribosomes6.setBounds(405,510,15,30);
+        ribosomes6.setOpaque(false);
+        ribosomes6.setContentAreaFilled(false);
+        ribosomes6.setBorderPainted(false);
+        ribosomes6.addActionListener(this);
+        ribosomes6.setCursor(new Cursor(Cursor.HAND_CURSOR));
+
+        ribosomes7 = new JButton();
+        ribosomes7.setBounds(410,551,30,10);
+        ribosomes7.setOpaque(false);
+        ribosomes7.setContentAreaFilled(false);
+        ribosomes7.setBorderPainted(false);
+        ribosomes7.addActionListener(this);
+        ribosomes7.setCursor(new Cursor(Cursor.HAND_CURSOR));
+
+        ribosomes8 = new JButton();
+        ribosomes8.setBounds(448,497,25,10);
+        ribosomes8.setOpaque(false);
+        ribosomes8.setContentAreaFilled(false);
+        ribosomes8.setBorderPainted(false);
+        ribosomes8.addActionListener(this);
+        ribosomes8.setCursor(new Cursor(Cursor.HAND_CURSOR));
+
+        ribosomes9 = new JButton();
+        ribosomes9.setBounds(453,560,25,15);
+        ribosomes9.setOpaque(false);
+        ribosomes9.setContentAreaFilled(false);
+        ribosomes9.setBorderPainted(false);
+        ribosomes9.addActionListener(this);
+        ribosomes9.setCursor(new Cursor(Cursor.HAND_CURSOR));
+
+        ribosomes10 = new JButton();
+        ribosomes10.setBounds(455,585,20,20);
+        ribosomes10.setOpaque(false);
+        ribosomes10.setContentAreaFilled(false);
+        ribosomes10.setBorderPainted(false);
+        ribosomes10.addActionListener(this);
+        ribosomes10.setCursor(new Cursor(Cursor.HAND_CURSOR));
+
+        ribosomes11 = new JButton();
+        ribosomes11.setBounds(503,615,27,20);
+        ribosomes11.setOpaque(false);
+        ribosomes11.setContentAreaFilled(false);
+        ribosomes11.setBorderPainted(false);
+        ribosomes11.addActionListener(this);
+        ribosomes11.setCursor(new Cursor(Cursor.HAND_CURSOR));
+
+        ribosomes12 = new JButton();
+        ribosomes12.setBounds(770,520,20,20);
+        ribosomes12.setOpaque(false);
+        ribosomes12.setContentAreaFilled(false);
+        ribosomes12.setBorderPainted(false);
+        ribosomes12.addActionListener(this);
+        ribosomes12.setCursor(new Cursor(Cursor.HAND_CURSOR));
+
+        ribosomes13 = new JButton();
+        ribosomes13.setBounds(798,460,14,24);
+        ribosomes13.setOpaque(false);
+        ribosomes13.setContentAreaFilled(false);
+        ribosomes13.setBorderPainted(false);
+        ribosomes13.addActionListener(this);
+        ribosomes13.setCursor(new Cursor(Cursor.HAND_CURSOR));
+
         plasmaMembranePanel = new JPanel();
         plasmaMembranePanel.setVisible(true);
-        plasmaMembranePanel.setBounds(930,310,280,40);
+        plasmaMembranePanel.setBounds(930,310,250,40);
         plasmaMembranePanel.setLayout(new BorderLayout());
         plasmaMembranePanel.setBackground(new Color(0x6af6be));
         //plasmaMembranePanel.setBorder(border);
@@ -352,7 +513,7 @@ public class Placell extends JFrame implements ActionListener {
         plasmaMembraneLabelGreen.setBackground(new Color(0x6af6be));
 
         plasmaMembraneButton = new JButton();
-        plasmaMembraneButton.setBounds(930,310,280,40);
+        plasmaMembraneButton.setBounds(930,310,250,40);
         plasmaMembraneButton.setOpaque(false);
         plasmaMembraneButton.setContentAreaFilled(false);
         plasmaMembraneButton.setBorderPainted(true);
@@ -386,7 +547,7 @@ public class Placell extends JFrame implements ActionListener {
 
         cellWallPanel = new JPanel();
         cellWallPanel.setVisible(true);
-        cellWallPanel.setBounds(930,350,280,40);
+        cellWallPanel.setBounds(930,350,250,40);
         cellWallPanel.setLayout(new BorderLayout());
         cellWallPanel.setBackground(new Color(0x6af6be));
         //cellWallPanel.setBorder(border);
@@ -407,7 +568,7 @@ public class Placell extends JFrame implements ActionListener {
         cellWallLabelGreen.setBackground(new Color(0x6af6be));
 
         cellWallButton = new JButton();
-        cellWallButton.setBounds(930,350,280,40);
+        cellWallButton.setBounds(930,350,250,40);
         cellWallButton.setOpaque(false);
         cellWallButton.setContentAreaFilled(false);
         cellWallButton.setBorderPainted(true);
@@ -440,9 +601,81 @@ public class Placell extends JFrame implements ActionListener {
         cellWallPanelClose.setBorderPainted(false);
         cellWallPanelClose.addActionListener(this);
 
+        cellWall1 = new JButton();
+        cellWall1.setBounds(680,620,220,80);
+        cellWall1.setOpaque(false);
+        cellWall1.setContentAreaFilled(false);
+        cellWall1.setBorderPainted(false);
+        cellWall1.addActionListener(this);
+        cellWall1.setCursor(new Cursor(Cursor.HAND_CURSOR));
+
+        cellWall2 = new JButton();
+        cellWall2.setBounds(765,570,135,50);
+        cellWall2.setOpaque(false);
+        cellWall2.setContentAreaFilled(false);
+        cellWall2.setBorderPainted(false);
+        cellWall2.addActionListener(this);
+        cellWall2.setCursor(new Cursor(Cursor.HAND_CURSOR));
+
+        cellWall3 = new JButton();
+        cellWall3.setBounds(830,270,50,310);
+        cellWall3.setOpaque(false);
+        cellWall3.setContentAreaFilled(false);
+        cellWall3.setBorderPainted(false);
+        cellWall3.addActionListener(this);
+        cellWall3.setCursor(new Cursor(Cursor.HAND_CURSOR));
+
+        cellWall4 = new JButton();
+        cellWall4.setBounds(385,710,175,260);
+        cellWall4.setOpaque(false);
+        cellWall4.setContentAreaFilled(false);
+        cellWall4.setBorderPainted(false);
+        cellWall4.addActionListener(this);
+        cellWall4.setCursor(new Cursor(Cursor.HAND_CURSOR));
+
+        cellWall5 = new JButton();
+        cellWall5.setBounds(280,708,107,104);
+        cellWall5.setOpaque(false);
+        cellWall5.setContentAreaFilled(false);
+        cellWall5.setBorderPainted(false);
+        cellWall5.addActionListener(this);
+        cellWall5.setCursor(new Cursor(Cursor.HAND_CURSOR));
+
+        cellWall6 = new JButton();
+        cellWall6.setBounds(100,700,180,200);
+        cellWall6.setOpaque(false);
+        cellWall6.setContentAreaFilled(false);
+        cellWall6.setBorderPainted(false);
+        cellWall6.addActionListener(this);
+        cellWall6.setCursor(new Cursor(Cursor.HAND_CURSOR));
+
+        cellWall7 = new JButton();
+        cellWall7.setBounds(10,450,90,320);
+        cellWall7.setOpaque(false);
+        cellWall7.setContentAreaFilled(false);
+        cellWall7.setBorderPainted(false);
+        cellWall7.addActionListener(this);
+        cellWall7.setCursor(new Cursor(Cursor.HAND_CURSOR));
+
+        cellWall8 = new JButton();
+        cellWall8.setBounds(210,900,180,60);
+        cellWall8.setOpaque(false);
+        cellWall8.setContentAreaFilled(false);
+        cellWall8.setBorderPainted(false);
+        cellWall8.addActionListener(this);
+        cellWall8.setCursor(new Cursor(Cursor.HAND_CURSOR));
+
+        cellWall9 = new JButton();
+        cellWall9.setBounds(100,630,90,70);
+        cellWall9.setOpaque(false);
+        cellWall9.setContentAreaFilled(false);
+        cellWall9.setBorderPainted(false);
+        cellWall9.addActionListener(this);
+        cellWall9.setCursor(new Cursor(Cursor.HAND_CURSOR));
+
         vacuolePanel = new JPanel();
         vacuolePanel.setVisible(true);
-        vacuolePanel.setBounds(930,390,280,40);
+        vacuolePanel.setBounds(930,390,250,40);
         vacuolePanel.setLayout(new BorderLayout());
         vacuolePanel.setBackground(new Color(0x6af6be));
         //vacuolePanel.setBorder(border);
@@ -463,7 +696,7 @@ public class Placell extends JFrame implements ActionListener {
         vacuoleLabelGreen.setBackground(new Color(0x6af6be));
 
         vacuoleButton = new JButton();
-        vacuoleButton.setBounds(930,390,280,40);
+        vacuoleButton.setBounds(930,390,250,40);
         vacuoleButton.setOpaque(false);
         vacuoleButton.setContentAreaFilled(false);
         vacuoleButton.setBorderPainted(true);
@@ -497,29 +730,32 @@ public class Placell extends JFrame implements ActionListener {
         vacuolePanelClose.addActionListener(this);
 
         vacuole1 = new JButton();
-        vacuole1.setBounds(170,280,280,220);
+        vacuole1.setBounds(170,280,250,220);
         vacuole1.setOpaque(false);
         vacuole1.setContentAreaFilled(false);
-        vacuole1.setBorderPainted(true);
+        vacuole1.setBorderPainted(false);
+        vacuole1.setCursor(new Cursor(Cursor.HAND_CURSOR));
         vacuole1.addActionListener(this);
 
         vacuole2 = new JButton();
         vacuole2.setBounds(330,230,180,200);
         vacuole2.setOpaque(false);
         vacuole2.setContentAreaFilled(false);
-        vacuole2.setBorderPainted(true);
+        vacuole2.setBorderPainted(false);
         vacuole2.addActionListener(this);
+        vacuole2.setCursor(new Cursor(Cursor.HAND_CURSOR));
 
         vacuole3 = new JButton();
         vacuole3.setBounds(510,250,20,120);
         vacuole3.setOpaque(false);
         vacuole3.setContentAreaFilled(false);
-        vacuole3.setBorderPainted(true);
+        vacuole3.setBorderPainted(false);
         vacuole3.addActionListener(this);
+        vacuole3.setCursor(new Cursor(Cursor.HAND_CURSOR));
 
         cellulosePanel = new JPanel();
         cellulosePanel.setVisible(true);
-        cellulosePanel.setBounds(930,430,280,40);
+        cellulosePanel.setBounds(930,430,250,40);
         cellulosePanel.setLayout(new BorderLayout());
         cellulosePanel.setBackground(new Color(0x6af6be));
         //cellulosePanel.setBorder(border);
@@ -540,7 +776,7 @@ public class Placell extends JFrame implements ActionListener {
         celluloseLabelGreen.setBackground(new Color(0x6af6be));
 
         celluloseButton = new JButton();
-        celluloseButton.setBounds(930,430,280,40);
+        celluloseButton.setBounds(930,430,250,40);
         celluloseButton.setOpaque(false);
         celluloseButton.setContentAreaFilled(false);
         celluloseButton.setBorderPainted(true);
@@ -575,7 +811,7 @@ public class Placell extends JFrame implements ActionListener {
 
         roughEndoplasmicReticulumPanel = new JPanel();
         roughEndoplasmicReticulumPanel.setVisible(true);
-        roughEndoplasmicReticulumPanel.setBounds(930,470,280,40);
+        roughEndoplasmicReticulumPanel.setBounds(930,470,250,40);
         roughEndoplasmicReticulumPanel.setLayout(new BorderLayout());
         roughEndoplasmicReticulumPanel.setBackground(new Color(0x6af6be));
         //roughEndoplasmicReticulumPanel.setBorder(border);
@@ -596,7 +832,7 @@ public class Placell extends JFrame implements ActionListener {
         roughEndoplasmicReticulumLabelGreen.setBackground(new Color(0x6af6be));
 
         roughEndoplasmicReticulumButton = new JButton();
-        roughEndoplasmicReticulumButton.setBounds(930,470,280,40);
+        roughEndoplasmicReticulumButton.setBounds(930,470,250,40);
         roughEndoplasmicReticulumButton.setOpaque(false);
         roughEndoplasmicReticulumButton.setContentAreaFilled(false);
         roughEndoplasmicReticulumButton.setBorderPainted(true);
@@ -632,26 +868,29 @@ public class Placell extends JFrame implements ActionListener {
         roughEndoplasmicReticulum1.setBounds(475,435,270,110);
         roughEndoplasmicReticulum1.setOpaque(false);
         roughEndoplasmicReticulum1.setContentAreaFilled(false);
-        roughEndoplasmicReticulum1.setBorderPainted(true);
+        roughEndoplasmicReticulum1.setBorderPainted(false);
         roughEndoplasmicReticulum1.addActionListener(this);
+        roughEndoplasmicReticulum1.setCursor(new Cursor(Cursor.HAND_CURSOR));
 
         roughEndoplasmicReticulum2 = new JButton();
         roughEndoplasmicReticulum2.setBounds(485,545,220,30);
         roughEndoplasmicReticulum2.setOpaque(false);
         roughEndoplasmicReticulum2.setContentAreaFilled(false);
-        roughEndoplasmicReticulum2.setBorderPainted(true);
+        roughEndoplasmicReticulum2.setBorderPainted(false);
         roughEndoplasmicReticulum2.addActionListener(this);
+        roughEndoplasmicReticulum2.setCursor(new Cursor(Cursor.HAND_CURSOR));
 
         roughEndoplasmicReticulum3 = new JButton();
         roughEndoplasmicReticulum3.setBounds(745,435,45,60);
         roughEndoplasmicReticulum3.setOpaque(false);
         roughEndoplasmicReticulum3.setContentAreaFilled(false);
-        roughEndoplasmicReticulum3.setBorderPainted(true);
+        roughEndoplasmicReticulum3.setBorderPainted(false);
         roughEndoplasmicReticulum3.addActionListener(this);
+        roughEndoplasmicReticulum3.setCursor(new Cursor(Cursor.HAND_CURSOR));
 
         golgiApparatusPanel = new JPanel();
         golgiApparatusPanel.setVisible(true);
-        golgiApparatusPanel.setBounds(930,510,280,40);
+        golgiApparatusPanel.setBounds(930,510,250,40);
         golgiApparatusPanel.setLayout(new BorderLayout());
         golgiApparatusPanel.setBackground(new Color(0x6af6be));
         //golgiApparatusPanel.setBorder(border);
@@ -672,7 +911,7 @@ public class Placell extends JFrame implements ActionListener {
         golgiApparatusLabelGreen.setBackground(new Color(0x6af6be));
 
         golgiApparatusButton = new JButton();
-        golgiApparatusButton.setBounds(930,510,280,40);
+        golgiApparatusButton.setBounds(930,510,250,40);
         golgiApparatusButton.setOpaque(false);
         golgiApparatusButton.setContentAreaFilled(false);
         golgiApparatusButton.setBorderPainted(true);
@@ -704,9 +943,33 @@ public class Placell extends JFrame implements ActionListener {
         golgiApparatusPanelClose.setBorderPainted(false);
         golgiApparatusPanelClose.addActionListener(this);
 
+        golgiApparatus1 = new JButton();
+        golgiApparatus1.setBounds(100,480,70,70);
+        golgiApparatus1.setOpaque(false);
+        golgiApparatus1.setContentAreaFilled(false);
+        golgiApparatus1.setBorderPainted(false);
+        golgiApparatus1.addActionListener(this);
+        golgiApparatus1.setCursor(new Cursor(Cursor.HAND_CURSOR));
+
+        golgiApparatus2 = new JButton();
+        golgiApparatus2.setBounds(280,620,220,90);
+        golgiApparatus2.setOpaque(false);
+        golgiApparatus2.setContentAreaFilled(false);
+        golgiApparatus2.setBorderPainted(false);
+        golgiApparatus2.addActionListener(this);
+        golgiApparatus2.setCursor(new Cursor(Cursor.HAND_CURSOR));
+
+        golgiApparatus3 = new JButton();
+        golgiApparatus3.setBounds(705,545,60,70);
+        golgiApparatus3.setOpaque(false);
+        golgiApparatus3.setContentAreaFilled(false);
+        golgiApparatus3.setBorderPainted(false);
+        golgiApparatus3.addActionListener(this);
+        golgiApparatus3.setCursor(new Cursor(Cursor.HAND_CURSOR));
+
         cytoskeletonPanel = new JPanel();
         cytoskeletonPanel.setVisible(true);
-        cytoskeletonPanel.setBounds(930,550,280,40);
+        cytoskeletonPanel.setBounds(930,550,250,40);
         cytoskeletonPanel.setLayout(new BorderLayout());
         cytoskeletonPanel.setBackground(new Color(0x6af6be));
         //cytoskeletonPanel.setBorder(border);
@@ -727,7 +990,7 @@ public class Placell extends JFrame implements ActionListener {
         cytoskeletonLabelGreen.setBackground(new Color(0x6af6be));
 
         cytoskeletonButton = new JButton();
-        cytoskeletonButton.setBounds(930,550,280,40);
+        cytoskeletonButton.setBounds(930,550,250,40);
         cytoskeletonButton.setOpaque(false);
         cytoskeletonButton.setContentAreaFilled(false);
         cytoskeletonButton.setBorderPainted(true);
@@ -761,9 +1024,25 @@ public class Placell extends JFrame implements ActionListener {
         cytoskeletonPanelClose.setBorderPainted(false);
         cytoskeletonPanelClose.addActionListener(this);
 
+        cytoskeleton1 = new JButton();
+        cytoskeleton1.setBounds(545,652,35,30);
+        cytoskeleton1.setOpaque(false);
+        cytoskeleton1.setContentAreaFilled(false);
+        cytoskeleton1.setBorderPainted(false);
+        cytoskeleton1.addActionListener(this);
+        cytoskeleton1.setCursor(new Cursor(Cursor.HAND_CURSOR));
+
+        cytoskeleton2 = new JButton();
+        cytoskeleton2.setBounds(192,635,60,50);
+        cytoskeleton2.setOpaque(false);
+        cytoskeleton2.setContentAreaFilled(false);
+        cytoskeleton2.setBorderPainted(false);
+        cytoskeleton2.addActionListener(this);
+        cytoskeleton2.setCursor(new Cursor(Cursor.HAND_CURSOR));
+
         peroxisomePanel = new JPanel();
         peroxisomePanel.setVisible(true);
-        peroxisomePanel.setBounds(930,590,280,40);
+        peroxisomePanel.setBounds(930,590,250,40);
         peroxisomePanel.setLayout(new BorderLayout());
         peroxisomePanel.setBackground(new Color(0x6af6be));
         //peroxisomePanel.setBorder(border);
@@ -784,7 +1063,7 @@ public class Placell extends JFrame implements ActionListener {
         peroxisomeLabelGreen.setBackground(new Color(0x6af6be));
 
         peroxisomeButton = new JButton();
-        peroxisomeButton.setBounds(930,590,280,40);
+        peroxisomeButton.setBounds(930,590,250,40);
         peroxisomeButton.setOpaque(false);
         peroxisomeButton.setContentAreaFilled(false);
         peroxisomeButton.setBorderPainted(true);
@@ -817,9 +1096,41 @@ public class Placell extends JFrame implements ActionListener {
         peroxisomePanelClose.setBorderPainted(false);
         peroxisomePanelClose.addActionListener(this);
 
+        peroxisome1 = new JButton();
+        peroxisome1.setBounds(403,570,40,25);
+        peroxisome1.setOpaque(false);
+        peroxisome1.setContentAreaFilled(false);
+        peroxisome1.setBorderPainted(false);
+        peroxisome1.addActionListener(this);
+        peroxisome1.setCursor(new Cursor(Cursor.HAND_CURSOR));
+
+        peroxisome2 = new JButton();
+        peroxisome2.setBounds(423,518,40,35);
+        peroxisome2.setOpaque(false);
+        peroxisome2.setContentAreaFilled(false);
+        peroxisome2.setBorderPainted(false);
+        peroxisome2.addActionListener(this);
+        peroxisome2.setCursor(new Cursor(Cursor.HAND_CURSOR));
+
+        peroxisome3 = new JButton();
+        peroxisome3.setBounds(477,573,48,37);
+        peroxisome3.setOpaque(false);
+        peroxisome3.setContentAreaFilled(false);
+        peroxisome3.setBorderPainted(false);
+        peroxisome3.addActionListener(this);
+        peroxisome3.setCursor(new Cursor(Cursor.HAND_CURSOR));
+
+        peroxisome4 = new JButton();
+        peroxisome4.setBounds(777,495,35,25);
+        peroxisome4.setOpaque(false);
+        peroxisome4.setContentAreaFilled(false);
+        peroxisome4.setBorderPainted(false);
+        peroxisome4.addActionListener(this);
+        peroxisome4.setCursor(new Cursor(Cursor.HAND_CURSOR));
+
         plasmodesmataPanel = new JPanel();
         plasmodesmataPanel.setVisible(true);
-        plasmodesmataPanel.setBounds(930,630,280,40);
+        plasmodesmataPanel.setBounds(930,630,250,40);
         plasmodesmataPanel.setLayout(new BorderLayout());
         plasmodesmataPanel.setBackground(new Color(0x6af6be));
         //plasmodesmataPanel.setBorder(border);
@@ -840,7 +1151,7 @@ public class Placell extends JFrame implements ActionListener {
         plasmodesmataLabelGreen.setBackground(new Color(0x6af6be));
 
         plasmodesmataButton = new JButton();
-        plasmodesmataButton.setBounds(930,630,280,40);
+        plasmodesmataButton.setBounds(930,630,250,40);
         plasmodesmataButton.setOpaque(false);
         plasmodesmataButton.setContentAreaFilled(false);
         plasmodesmataButton.setBorderPainted(true);
@@ -877,19 +1188,21 @@ public class Placell extends JFrame implements ActionListener {
         plasmodesmata1.setBounds(560,700,240,160);
         plasmodesmata1.setOpaque(false);
         plasmodesmata1.setContentAreaFilled(false);
-        plasmodesmata1.setBorderPainted(true);
+        plasmodesmata1.setBorderPainted(false);
         plasmodesmata1.addActionListener(this);
+        plasmodesmata1.setCursor(new Cursor(Cursor.HAND_CURSOR));
 
         plasmodesmata2 = new JButton();
         plasmodesmata2.setBounds(280,810,105,90);
         plasmodesmata2.setOpaque(false);
         plasmodesmata2.setContentAreaFilled(false);
-        plasmodesmata2.setBorderPainted(true);
+        plasmodesmata2.setBorderPainted(false);
         plasmodesmata2.addActionListener(this);
+        plasmodesmata2.setCursor(new Cursor(Cursor.HAND_CURSOR));
 
         chloroplastPanel = new JPanel();
         chloroplastPanel.setVisible(true);
-        chloroplastPanel.setBounds(930,670,280,40);
+        chloroplastPanel.setBounds(930,670,250,40);
         chloroplastPanel.setLayout(new BorderLayout());
         chloroplastPanel.setBackground(new Color(0x6af6be));
         //chloroplastPanel.setBorder(border);
@@ -910,7 +1223,7 @@ public class Placell extends JFrame implements ActionListener {
         chloroplastLabelGreen.setBackground(new Color(0x6af6be));
 
         chloroplastButton = new JButton();
-        chloroplastButton.setBounds(930,670,280,40);
+        chloroplastButton.setBounds(930,670,250,40);
         chloroplastButton.setOpaque(false);
         chloroplastButton.setContentAreaFilled(false);
         chloroplastButton.setBorderPainted(true);
@@ -942,6 +1255,14 @@ public class Placell extends JFrame implements ActionListener {
         chloroplastPanelClose.setIcon(porzam);
         chloroplastPanelClose.setBorderPainted(false);
         chloroplastPanelClose.addActionListener(this);
+
+        chloroplast1 = new JButton();
+        chloroplast1.setBounds(193,500,87,60);
+        chloroplast1.setOpaque(false);
+        chloroplast1.setContentAreaFilled(false);
+        chloroplast1.setBorderPainted(false);
+        chloroplast1.addActionListener(this);
+        chloroplast1.setCursor(new Cursor(Cursor.HAND_CURSOR));
 
         goBack = new JButton();
         goBack.setBounds(1060,900,120,40);
@@ -975,6 +1296,7 @@ public class Placell extends JFrame implements ActionListener {
         this.add(mitochondrion1);
         this.add(mitochondrion2);
         this.add(mitochondrion3);
+        this.add(mitochondrion4);
 
         this.add(ribosomesPanel);
         ribosomesPanel.add(ribosomesLabel);
@@ -982,6 +1304,19 @@ public class Placell extends JFrame implements ActionListener {
         this.add(ribosomesPanelDescription);
         ribosomesPanelDescription.add(ribosomesPanelClose);
         ribosomesPanelDescription.add(ribosomesLabelDescription);
+        this.add(ribosomes1);
+        this.add(ribosomes2);
+        this.add(ribosomes3);
+        this.add(ribosomes4);
+        this.add(ribosomes5);
+        this.add(ribosomes6);
+        this.add(ribosomes7);
+        this.add(ribosomes8);
+        this.add(ribosomes9);
+        this.add(ribosomes10);
+        this.add(ribosomes11);
+        this.add(ribosomes12);
+        this.add(ribosomes13);
 
         this.add(plasmaMembranePanel);
         plasmaMembranePanel.add(plasmaMembraneLabel);
@@ -996,6 +1331,15 @@ public class Placell extends JFrame implements ActionListener {
         this.add(cellWallPanelDescription);
         cellWallPanelDescription.add(cellWallPanelClose);
         cellWallPanelDescription.add(cellWallLabelDescription);
+        this.add(cellWall1);
+        this.add(cellWall2);
+        this.add(cellWall3);
+        this.add(cellWall4);
+        this.add(cellWall5);
+        this.add(cellWall6);
+        this.add(cellWall7);
+        this.add(cellWall8);
+        this.add(cellWall9);
 
         this.add(vacuolePanel);
         vacuolePanel.add(vacuoleLabel);
@@ -1030,6 +1374,9 @@ public class Placell extends JFrame implements ActionListener {
         this.add(golgiApparatusPanelDescription);
         golgiApparatusPanelDescription.add(golgiApparatusPanelClose);
         golgiApparatusPanelDescription.add(golgiApparatusLabelDescription);
+        this.add(golgiApparatus1);
+        this.add(golgiApparatus2);
+        this.add(golgiApparatus3);
 
         this.add(cytoskeletonPanel);
         cytoskeletonPanel.add(cytoskeletonLabel);
@@ -1037,6 +1384,8 @@ public class Placell extends JFrame implements ActionListener {
         this.add(cytoskeletonPanelDescription);
         cytoskeletonPanelDescription.add(cytoskeletonPanelClose);
         cytoskeletonPanelDescription.add(cytoskeletonLabelDescription);
+        this.add(cytoskeleton1);
+        this.add(cytoskeleton2);
 
         this.add(peroxisomePanel);
         peroxisomePanel.add(peroxisomeLabel);
@@ -1044,6 +1393,10 @@ public class Placell extends JFrame implements ActionListener {
         this.add(peroxisomePanelDescription);
         peroxisomePanelDescription.add(peroxisomePanelClose);
         peroxisomePanelDescription.add(peroxisomeLabelDescription);
+        this.add(peroxisome1);
+        this.add(peroxisome2);
+        this.add(peroxisome3);
+        this.add(peroxisome4);
 
         this.add(plasmodesmataPanel);
         plasmodesmataPanel.add(plasmodesmataLabel);
@@ -1060,8 +1413,9 @@ public class Placell extends JFrame implements ActionListener {
         this.add(chloroplastPanelDescription);
         chloroplastPanelDescription.add(chloroplastPanelClose);
         chloroplastPanelDescription.add(chloroplastLabelDescription);
+        this.add(chloroplast1);
 
-
+        this.add(progressBar);
         this.add(label);
 
         ImageIcon logo = new ImageIcon("src/resources/logo.jpg");
@@ -1080,6 +1434,9 @@ public class Placell extends JFrame implements ActionListener {
             nucleusPanelDescription.setVisible(true);
         }
         if(e.getSource()==nucleusPanelClose){
+            if(!nucleusLabelGreen.isVisible()){
+                progressBar.setValue(i=i+8);
+            }
             nucleusPanelDescription.setVisible(false);
             nucleusLabel.setVisible(false);
             nucleusLabelGreen.setVisible(true);
@@ -1093,6 +1450,9 @@ public class Placell extends JFrame implements ActionListener {
             mitochondrionPanelDescription.setVisible(true);
         }
         if(e.getSource()==mitochondrionPanelClose){
+            if(!mitochondrionLabelGreen.isVisible()){
+                progressBar.setValue(i=i+8);
+            }
             mitochondrionPanelDescription.setVisible(false);
             mitochondrionLabel.setVisible(false);
             mitochondrionLabelGreen.setVisible(true);
@@ -1108,20 +1468,68 @@ public class Placell extends JFrame implements ActionListener {
         if(e.getSource()==mitochondrion3) {
             mitochondrionPanelDescription.setVisible(true);
         }
+        if(e.getSource()==mitochondrion4) {
+            mitochondrionPanelDescription.setVisible(true);
+        }
         if(e.getSource()==ribosomesButton){
             ribosomesPanelDescription.setVisible(true);
         }
         if(e.getSource()==ribosomesPanelClose){
+            if(!ribosomesLabelGreen.isVisible()){
+                progressBar.setValue(i=i+7);
+            }
             ribosomesPanelDescription.setVisible(false);
             ribosomesLabel.setVisible(false);
             ribosomesLabelGreen.setVisible(true);
             ribosomesLabelGreen.setOpaque(true);
             ribosomesPanel.add(ribosomesLabelGreen);
         }
+        if(e.getSource()==ribosomes1) {
+            ribosomesPanelDescription.setVisible(true);
+        }
+        if(e.getSource()==ribosomes2) {
+            ribosomesPanelDescription.setVisible(true);
+        }
+        if(e.getSource()==ribosomes3) {
+            ribosomesPanelDescription.setVisible(true);
+        }
+        if(e.getSource()==ribosomes4) {
+            ribosomesPanelDescription.setVisible(true);
+        }
+        if(e.getSource()==ribosomes5) {
+            ribosomesPanelDescription.setVisible(true);
+        }
+        if(e.getSource()==ribosomes6) {
+            ribosomesPanelDescription.setVisible(true);
+        }
+        if(e.getSource()==ribosomes7) {
+            ribosomesPanelDescription.setVisible(true);
+        }
+        if(e.getSource()==ribosomes8) {
+            ribosomesPanelDescription.setVisible(true);
+        }
+        if(e.getSource()==ribosomes9) {
+            ribosomesPanelDescription.setVisible(true);
+        }
+        if(e.getSource()==ribosomes10) {
+            ribosomesPanelDescription.setVisible(true);
+        }
+        if(e.getSource()==ribosomes11) {
+            ribosomesPanelDescription.setVisible(true);
+        }
+        if(e.getSource()==ribosomes12) {
+            ribosomesPanelDescription.setVisible(true);
+        }
+        if(e.getSource()==ribosomes13) {
+            ribosomesPanelDescription.setVisible(true);
+        }
         if(e.getSource()==plasmaMembraneButton){
             plasmaMembranePanelDescription.setVisible(true);
         }
         if(e.getSource()==plasmaMembranePanelClose){
+            if(!plasmaMembraneLabelGreen.isVisible()){
+                progressBar.setValue(i=i+7);
+            }
             plasmaMembranePanelDescription.setVisible(false);
             plasmaMembraneLabel.setVisible(false);
             plasmaMembraneLabelGreen.setVisible(true);
@@ -1132,16 +1540,50 @@ public class Placell extends JFrame implements ActionListener {
             cellWallPanelDescription.setVisible(true);
         }
         if(e.getSource()==cellWallPanelClose){
+            if(!cellWallLabelGreen.isVisible()){
+                progressBar.setValue(i=i+7);
+            }
             cellWallPanelDescription.setVisible(false);
             cellWallLabel.setVisible(false);
             cellWallLabelGreen.setVisible(true);
             cellWallLabelGreen.setOpaque(true);
             cellWallPanel.add(cellWallLabelGreen);
+            i++;
+        }
+        if(e.getSource()==cellWall1){
+            cellWallPanelDescription.setVisible(true);
+        }
+        if(e.getSource()==cellWall2){
+            cellWallPanelDescription.setVisible(true);
+        }
+        if(e.getSource()==cellWall3){
+            cellWallPanelDescription.setVisible(true);
+        }
+        if(e.getSource()==cellWall4){
+            cellWallPanelDescription.setVisible(true);
+        }
+        if(e.getSource()==cellWall5){
+            cellWallPanelDescription.setVisible(true);
+        }
+        if(e.getSource()==cellWall6){
+            cellWallPanelDescription.setVisible(true);
+        }
+        if(e.getSource()==cellWall7){
+            cellWallPanelDescription.setVisible(true);
+        }
+        if(e.getSource()==cellWall8){
+            cellWallPanelDescription.setVisible(true);
+        }
+        if(e.getSource()==cellWall9){
+            cellWallPanelDescription.setVisible(true);
         }
         if(e.getSource()==vacuoleButton){
             vacuolePanelDescription.setVisible(true);
         }
         if(e.getSource()==vacuolePanelClose){
+            if(!vacuoleLabelGreen.isVisible()){
+                progressBar.setValue(i=i+7);
+            }
             vacuolePanelDescription.setVisible(false);
             vacuoleLabel.setVisible(false);
             vacuoleLabelGreen.setVisible(true);
@@ -1161,6 +1603,9 @@ public class Placell extends JFrame implements ActionListener {
             cellulosePanelDescription.setVisible(true);
         }
         if(e.getSource()==cellulosePanelClose){
+            if(!celluloseLabelGreen.isVisible()){
+                progressBar.setValue(i=i+8);
+            }
             cellulosePanelDescription.setVisible(false);
             celluloseLabel.setVisible(false);
             celluloseLabelGreen.setVisible(true);
@@ -1171,6 +1616,9 @@ public class Placell extends JFrame implements ActionListener {
             roughEndoplasmicReticulumPanelDescription.setVisible(true);
         }
         if(e.getSource()==roughEndoplasmicReticulumPanelClose){
+            if(!roughEndoplasmicReticulumLabelGreen.isVisible()){
+                progressBar.setValue(i=i+8);
+            }
             roughEndoplasmicReticulumPanelDescription.setVisible(false);
             roughEndoplasmicReticulumLabel.setVisible(false);
             roughEndoplasmicReticulumLabelGreen.setVisible(true);
@@ -1190,36 +1638,75 @@ public class Placell extends JFrame implements ActionListener {
             golgiApparatusPanelDescription.setVisible(true);
         }
         if(e.getSource()==golgiApparatusPanelClose){
+            if(!golgiApparatusLabelGreen.isVisible()){
+                progressBar.setValue(i=i+8);
+            }
             golgiApparatusPanelDescription.setVisible(false);
             golgiApparatusLabel.setVisible(false);
             golgiApparatusLabelGreen.setVisible(true);
             golgiApparatusLabelGreen.setOpaque(true);
             golgiApparatusPanel.add(golgiApparatusLabelGreen);
         }
+        if(e.getSource()==golgiApparatus1){
+            golgiApparatusPanelDescription.setVisible(true);
+        }
+        if(e.getSource()==golgiApparatus2){
+            golgiApparatusPanelDescription.setVisible(true);
+        }
+        if(e.getSource()==golgiApparatus3){
+            golgiApparatusPanelDescription.setVisible(true);
+        }
         if(e.getSource()==cytoskeletonButton){
             cytoskeletonPanelDescription.setVisible(true);
         }
         if(e.getSource()==cytoskeletonPanelClose){
+            if(!cytoskeletonLabelGreen.isVisible()){
+                progressBar.setValue(i=i+8);
+            }
             cytoskeletonPanelDescription.setVisible(false);
             cytoskeletonLabel.setVisible(false);
             cytoskeletonLabelGreen.setVisible(true);
             cytoskeletonLabelGreen.setOpaque(true);
             cytoskeletonPanel.add(cytoskeletonLabelGreen);
         }
+        if(e.getSource()==cytoskeleton1){
+            cytoskeletonPanelDescription.setVisible(true);
+        }
+        if(e.getSource()==cytoskeleton2){
+            cytoskeletonPanelDescription.setVisible(true);
+        }
         if(e.getSource()==peroxisomeButton){
             peroxisomePanelDescription.setVisible(true);
         }
         if(e.getSource()==peroxisomePanelClose){
+            if(!peroxisomeLabelGreen.isVisible()){
+                progressBar.setValue(i=i+8);
+            }
             peroxisomePanelDescription.setVisible(false);
             peroxisomeLabel.setVisible(false);
             peroxisomeLabelGreen.setVisible(true);
             peroxisomeLabelGreen.setOpaque(true);
             peroxisomePanel.add(peroxisomeLabelGreen);
         }
+        if(e.getSource()==peroxisome1){
+            peroxisomePanelDescription.setVisible(true);
+        }
+        if(e.getSource()==peroxisome2){
+            peroxisomePanelDescription.setVisible(true);
+        }
+        if(e.getSource()==peroxisome3){
+            peroxisomePanelDescription.setVisible(true);
+        }
+        if(e.getSource()==peroxisome4){
+            peroxisomePanelDescription.setVisible(true);
+        }
         if(e.getSource()==plasmodesmataButton){
             plasmodesmataPanelDescription.setVisible(true);
         }
         if(e.getSource()==plasmodesmataPanelClose){
+            if(!plasmodesmataLabelGreen.isVisible()){
+                progressBar.setValue(i=i+8);
+            }
             plasmodesmataPanelDescription.setVisible(false);
             plasmodesmataLabel.setVisible(false);
             plasmodesmataLabelGreen.setVisible(true);
@@ -1236,11 +1723,17 @@ public class Placell extends JFrame implements ActionListener {
             chloroplastPanelDescription.setVisible(true);
         }
         if(e.getSource()==chloroplastPanelClose){
+            if(!chloroplastLabelGreen.isVisible()){
+                progressBar.setValue(i=i+8);
+            }
             chloroplastPanelDescription.setVisible(false);
             chloroplastLabel.setVisible(false);
             chloroplastLabelGreen.setVisible(true);
             chloroplastLabelGreen.setOpaque(true);
             chloroplastPanel.add(chloroplastLabelGreen);
+        }
+        if(e.getSource()==chloroplast1){
+            chloroplastPanelDescription.setVisible(true);
         }
     }
 }
