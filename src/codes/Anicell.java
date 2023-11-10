@@ -16,6 +16,8 @@ public class Anicell extends JFrame implements ActionListener {
     JLabel nucleusLabelDescription;
     JButton nucleusPanelClose;
     JLabel nucleusLabelGreen;
+    JButton nucleus1;
+    JButton nucleus2;
 
     JPanel mitochondrionPanel;
     JLabel mitochondrionLabel;
@@ -72,6 +74,9 @@ public class Anicell extends JFrame implements ActionListener {
     JLabel roughEndoplasmicReticulumLabelDescription;
     JButton roughEndoplasmicReticulumPanelClose;
     JLabel roughEndoplasmicReticulumLabelGreen;
+    JButton roughEndoplasmicReticulum1;
+    JButton roughEndoplasmicReticulum2;
+    JButton roughEndoplasmicReticulum3;
 
     JPanel golgiApparatusPanel;
     JLabel golgiApparatusLabel;
@@ -80,6 +85,8 @@ public class Anicell extends JFrame implements ActionListener {
     JLabel golgiApparatusLabelDescription;
     JButton golgiApparatusPanelClose;
     JLabel golgiApparatusLabelGreen;
+    JButton golgiApparatus1;
+    JButton golgiApparatus2;
 
     JPanel cytoskeletonPanel;
     JLabel cytoskeletonLabel;
@@ -107,12 +114,26 @@ public class Anicell extends JFrame implements ActionListener {
 
     JButton goBack;
     String pass4;
+    JProgressBar progressBar = new JProgressBar();
+    int i=0;
 
     public Anicell(String pass4) {
         this.pass4 = pass4;
         ImageIcon background = new ImageIcon("src/resources/ANICELL.png");
         JLabel label = new JLabel();
         label.setIcon(background);
+
+        Border border = BorderFactory.createLineBorder(Color.BLUE, 1);
+        Border bb = BorderFactory.createLineBorder(Color.RED, 1);
+
+        progressBar.setValue(0);
+        progressBar.setBounds(390,120,500,50);
+        progressBar.setStringPainted(true);
+        //progressBar.setString("Level");
+        progressBar.setBorderPainted(true);
+        progressBar.setBorder(border);
+        progressBar.setForeground(Color.green);
+        progressBar.setBackground(Color.RED);
 
         //Border border = BorderFactory.createLineBorder(Color.green, 5);
         nucleusPanel = new JPanel();
@@ -173,6 +194,22 @@ public class Anicell extends JFrame implements ActionListener {
         nucleusPanelClose.setIcon(porzam);
         nucleusPanelClose.setBorderPainted(false);
         nucleusPanelClose.addActionListener(this);
+
+        nucleus1 = new JButton();
+        nucleus1.setBounds(330,200,260,270);
+        nucleus1.setOpaque(false);
+        nucleus1.setContentAreaFilled(false);
+        nucleus1.setBorderPainted(true);
+        nucleus1.addActionListener(this);
+        nucleus1.setCursor(new Cursor(Cursor.HAND_CURSOR));
+
+        nucleus2 = new JButton();
+        nucleus2.setBounds(590,260,70,150);
+        nucleus2.setOpaque(false);
+        nucleus2.setContentAreaFilled(false);
+        nucleus2.setBorderPainted(true);
+        nucleus2.addActionListener(this);
+        nucleus2.setCursor(new Cursor(Cursor.HAND_CURSOR));
 
         mitochondrionPanel = new JPanel();
         mitochondrionPanel.setVisible(true);
@@ -560,6 +597,30 @@ public class Anicell extends JFrame implements ActionListener {
         roughEndoplasmicReticulumPanelClose.setBorderPainted(false);
         roughEndoplasmicReticulumPanelClose.addActionListener(this);
 
+        roughEndoplasmicReticulum1 = new JButton();
+        roughEndoplasmicReticulum1.setBounds(660,330,120,140);
+        roughEndoplasmicReticulum1.setOpaque(false);
+        roughEndoplasmicReticulum1.setContentAreaFilled(false);
+        roughEndoplasmicReticulum1.setBorderPainted(true);
+        roughEndoplasmicReticulum1.addActionListener(this);
+        roughEndoplasmicReticulum1.setCursor(new Cursor(Cursor.HAND_CURSOR));
+
+        roughEndoplasmicReticulum2 = new JButton();
+        roughEndoplasmicReticulum2.setBounds(360,470,370,130);
+        roughEndoplasmicReticulum2.setOpaque(false);
+        roughEndoplasmicReticulum2.setContentAreaFilled(false);
+        roughEndoplasmicReticulum2.setBorderPainted(true);
+        roughEndoplasmicReticulum2.addActionListener(this);
+        roughEndoplasmicReticulum2.setCursor(new Cursor(Cursor.HAND_CURSOR));
+
+        roughEndoplasmicReticulum3 = new JButton();
+        roughEndoplasmicReticulum3.setBounds(210,290,120,200);
+        roughEndoplasmicReticulum3.setOpaque(false);
+        roughEndoplasmicReticulum3.setContentAreaFilled(false);
+        roughEndoplasmicReticulum3.setBorderPainted(true);
+        roughEndoplasmicReticulum3.addActionListener(this);
+        roughEndoplasmicReticulum3.setCursor(new Cursor(Cursor.HAND_CURSOR));
+
         golgiApparatusPanel = new JPanel();
         golgiApparatusPanel.setVisible(true);
         golgiApparatusPanel.setBounds(930,510,280,40);
@@ -616,6 +677,24 @@ public class Anicell extends JFrame implements ActionListener {
         golgiApparatusPanelClose.setIcon(porzam);
         golgiApparatusPanelClose.setBorderPainted(false);
         golgiApparatusPanelClose.addActionListener(this);
+
+        golgiApparatus1 = new JButton();
+        golgiApparatus1.setBounds(660,330,120,140);
+        golgiApparatus1.setOpaque(false);
+        golgiApparatus1.setContentAreaFilled(false);
+        golgiApparatus1.setBorderPainted(true);
+        golgiApparatus1.addActionListener(this);
+        golgiApparatus1.setCursor(new Cursor(Cursor.HAND_CURSOR));
+        golgiApparatus1.setBorder(bb);
+
+        golgiApparatus2 = new JButton();
+        golgiApparatus2.setBounds(600,500,120,140);
+        golgiApparatus2.setOpaque(false);
+        golgiApparatus2.setContentAreaFilled(false);
+        golgiApparatus2.setBorderPainted(true);
+        golgiApparatus2.addActionListener(this);
+        golgiApparatus2.setCursor(new Cursor(Cursor.HAND_CURSOR));
+        golgiApparatus2.setBorder(bb);
 
         cytoskeletonPanel = new JPanel();
         cytoskeletonPanel.setVisible(true);
@@ -803,6 +882,8 @@ public class Anicell extends JFrame implements ActionListener {
         this.add(nucleusPanelDescription);
         nucleusPanelDescription.add(nucleusPanelClose);
         nucleusPanelDescription.add(nucleusLabelDescription);
+        this.add(nucleus1);
+        this.add(nucleus2);
 
         this.add(mitochondrionPanel);
         mitochondrionPanel.add(mitochondrionLabel);
@@ -852,6 +933,9 @@ public class Anicell extends JFrame implements ActionListener {
         this.add(roughEndoplasmicReticulumPanelDescription);
         roughEndoplasmicReticulumPanelDescription.add(roughEndoplasmicReticulumPanelClose);
         roughEndoplasmicReticulumPanelDescription.add(roughEndoplasmicReticulumLabelDescription);
+        this.add(roughEndoplasmicReticulum1);
+        this.add(roughEndoplasmicReticulum2);
+        this.add(roughEndoplasmicReticulum3);
 
         this.add(golgiApparatusPanel);
         golgiApparatusPanel.add(golgiApparatusLabel);
@@ -859,6 +943,8 @@ public class Anicell extends JFrame implements ActionListener {
         this.add(golgiApparatusPanelDescription);
         golgiApparatusPanelDescription.add(golgiApparatusPanelClose);
         golgiApparatusPanelDescription.add(golgiApparatusLabelDescription);
+        this.add(golgiApparatus1);
+        this.add(golgiApparatus2);
 
         this.add(cytoskeletonPanel);
         cytoskeletonPanel.add(cytoskeletonLabel);
@@ -881,7 +967,7 @@ public class Anicell extends JFrame implements ActionListener {
         lysosomePanelDescription.add(lysosomePanelClose);
         lysosomePanelDescription.add(lysosomeLabelDescription);
 
-
+        this.add(progressBar);
         this.add(label);
 
         ImageIcon logo = new ImageIcon("src/resources/logo.jpg");
@@ -900,16 +986,28 @@ public class Anicell extends JFrame implements ActionListener {
             nucleusPanelDescription.setVisible(true);
         }
         if(e.getSource()==nucleusPanelClose){
+            if(!nucleusLabelGreen.isVisible()){
+                progressBar.setValue(i=i+9);
+            }
             nucleusPanelDescription.setVisible(false);
             nucleusLabel.setVisible(false);
             nucleusLabelGreen.setVisible(true);
             nucleusLabelGreen.setOpaque(true);
             nucleusPanel.add(nucleusLabelGreen);
         }
+        if(e.getSource()==nucleus1){
+            nucleusPanelDescription.setVisible(true);
+        }
+        if(e.getSource()==nucleus2){
+            nucleusPanelDescription.setVisible(true);
+        }
         if(e.getSource()==mitochondrionButton){
             mitochondrionPanelDescription.setVisible(true);
         }
         if(e.getSource()==mitochondrionPanelClose){
+            if(!mitochondrionLabelGreen.isVisible()){
+                progressBar.setValue(i=i+9);
+            }
             mitochondrionPanelDescription.setVisible(false);
             mitochondrionLabel.setVisible(false);
             mitochondrionLabelGreen.setVisible(true);
@@ -920,6 +1018,9 @@ public class Anicell extends JFrame implements ActionListener {
             ribosomesPanelDescription.setVisible(true);
         }
         if(e.getSource()==ribosomesPanelClose){
+            if(!ribosomesLabelGreen.isVisible()){
+                progressBar.setValue(i=i+9);
+            }
             ribosomesPanelDescription.setVisible(false);
             ribosomesLabel.setVisible(false);
             ribosomesLabelGreen.setVisible(true);
@@ -930,6 +1031,9 @@ public class Anicell extends JFrame implements ActionListener {
             plasmaMembranePanelDescription.setVisible(true);
         }
         if(e.getSource()==plasmaMembranePanelClose){
+            if(!plasmaMembraneLabelGreen.isVisible()){
+                progressBar.setValue(i=i+9);
+            }
             plasmaMembranePanelDescription.setVisible(false);
             plasmaMembraneLabel.setVisible(false);
             plasmaMembraneLabelGreen.setVisible(true);
@@ -940,6 +1044,9 @@ public class Anicell extends JFrame implements ActionListener {
             centrosomePanelDescription.setVisible(true);
         }
         if(e.getSource()==centrosomePanelClose){
+            if(!centrosomeLabelGreen.isVisible()){
+                progressBar.setValue(i=i+8);
+            }
             centrosomePanelDescription.setVisible(false);
             centrosomeLabel.setVisible(false);
             centrosomeLabelGreen.setVisible(true);
@@ -950,6 +1057,9 @@ public class Anicell extends JFrame implements ActionListener {
             vacuolePanelDescription.setVisible(true);
         }
         if(e.getSource()==vacuolePanelClose){
+            if(!vacuoleLabelGreen.isVisible()){
+                progressBar.setValue(i=i+8);
+            }
             vacuolePanelDescription.setVisible(false);
             vacuoleLabel.setVisible(false);
             vacuoleLabelGreen.setVisible(true);
@@ -960,6 +1070,9 @@ public class Anicell extends JFrame implements ActionListener {
             cellulosePanelDescription.setVisible(true);
         }
         if(e.getSource()==cellulosePanelClose){
+            if(!celluloseLabelGreen.isVisible()){
+                progressBar.setValue(i=i+8);
+            }
             cellulosePanelDescription.setVisible(false);
             celluloseLabel.setVisible(false);
             celluloseLabelGreen.setVisible(true);
@@ -970,26 +1083,50 @@ public class Anicell extends JFrame implements ActionListener {
             roughEndoplasmicReticulumPanelDescription.setVisible(true);
         }
         if(e.getSource()==roughEndoplasmicReticulumPanelClose){
+            if(!roughEndoplasmicReticulumLabelGreen.isVisible()){
+                progressBar.setValue(i=i+8);
+            }
             roughEndoplasmicReticulumPanelDescription.setVisible(false);
             roughEndoplasmicReticulumLabel.setVisible(false);
             roughEndoplasmicReticulumLabelGreen.setVisible(true);
             roughEndoplasmicReticulumLabelGreen.setOpaque(true);
             roughEndoplasmicReticulumPanel.add(roughEndoplasmicReticulumLabelGreen);
         }
+        if(e.getSource()==roughEndoplasmicReticulum1){
+            roughEndoplasmicReticulumPanelDescription.setVisible(true);
+        }
+        if(e.getSource()==roughEndoplasmicReticulum2){
+            roughEndoplasmicReticulumPanelDescription.setVisible(true);
+        }
+        if(e.getSource()==roughEndoplasmicReticulum3){
+            roughEndoplasmicReticulumPanelDescription.setVisible(true);
+        }
         if(e.getSource()==golgiApparatusButton){
             golgiApparatusPanelDescription.setVisible(true);
         }
         if(e.getSource()==golgiApparatusPanelClose){
+            if(!golgiApparatusLabelGreen.isVisible()){
+                progressBar.setValue(i=i+8);
+            }
             golgiApparatusPanelDescription.setVisible(false);
             golgiApparatusLabel.setVisible(false);
             golgiApparatusLabelGreen.setVisible(true);
             golgiApparatusLabelGreen.setOpaque(true);
             golgiApparatusPanel.add(golgiApparatusLabelGreen);
         }
+        if(e.getSource()==golgiApparatus1){
+            golgiApparatusPanelDescription.setVisible(true);
+        }
+        if(e.getSource()==golgiApparatus2){
+            golgiApparatusPanelDescription.setVisible(true);
+        }
         if(e.getSource()==cytoskeletonButton){
             cytoskeletonPanelDescription.setVisible(true);
         }
         if(e.getSource()==cytoskeletonPanelClose){
+            if(!cytoskeletonLabelGreen.isVisible()){
+                progressBar.setValue(i=i+8);
+            }
             cytoskeletonPanelDescription.setVisible(false);
             cytoskeletonLabel.setVisible(false);
             cytoskeletonLabelGreen.setVisible(true);
@@ -1000,6 +1137,9 @@ public class Anicell extends JFrame implements ActionListener {
             peroxisomePanelDescription.setVisible(true);
         }
         if(e.getSource()==peroxisomePanelClose){
+            if(!peroxisomeLabelGreen.isVisible()){
+                progressBar.setValue(i=i+8);
+            }
             peroxisomePanelDescription.setVisible(false);
             peroxisomeLabel.setVisible(false);
             peroxisomeLabelGreen.setVisible(true);
@@ -1010,6 +1150,9 @@ public class Anicell extends JFrame implements ActionListener {
             lysosomePanelDescription.setVisible(true);
         }
         if(e.getSource()==lysosomePanelClose){
+            if(!lysosomeLabelGreen.isVisible()){
+                progressBar.setValue(i=i+8);
+            }
             lysosomePanelDescription.setVisible(false);
             lysosomeLabel.setVisible(false);
             lysosomeLabelGreen.setVisible(true);

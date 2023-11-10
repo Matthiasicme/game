@@ -8,7 +8,7 @@ public class Main {
          */
         public static void main(String[] args) {
 
-                Baccell Baccell = new Baccell(null);
-                //Interface Interface = new Interface(false, null);
+                //Anicell Anicell = new Anicell(null);
+                Interface Interface = new Interface(false, null);
         }
 }

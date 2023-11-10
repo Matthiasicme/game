@@ -34,8 +34,20 @@ public class Baccell extends JFrame implements ActionListener {
     JPanel ribosomesPanelDescription;
     JLabel ribosomesLabelDescription;
     JButton ribosomesPanelClose;
-    JLabel ribosomesLabelGreen;    
-    
+    JLabel ribosomesLabelGreen;
+    JButton ribosomes1;
+    JButton ribosomes2;
+    JButton ribosomes3;
+    JButton ribosomes4;
+    JButton ribosomes5;
+    JButton ribosomes6;
+    JButton ribosomes7;
+    JButton ribosomes8;
+    JButton ribosomes9;
+    JButton ribosomes10;
+    JButton ribosomes11;
+    JButton ribosomes12;
+
     JPanel plasmaMembranePanel;
     JLabel plasmaMembraneLabel;
     JButton plasmaMembraneButton;
@@ -76,7 +88,12 @@ public class Baccell extends JFrame implements ActionListener {
     JLabel capsuleLabelDescription;
     JButton capsulePanelClose;
     JLabel capsuleLabelGreen;
-    
+    JButton capsule1;
+    JButton capsule2;
+    JButton capsule3;
+    JButton capsule4;
+    JButton capsule5;
+
     JPanel flagellaPanel;
     JLabel flagellaLabel;
     JButton flagellaButton;
@@ -173,7 +190,7 @@ public class Baccell extends JFrame implements ActionListener {
         fimbriae1.setBounds(285,410,50,55);
         fimbriae1.setOpaque(false);
         fimbriae1.setContentAreaFilled(false);
-        fimbriae1.setBorderPainted(true);
+        fimbriae1.setBorderPainted(false);
         fimbriae1.addActionListener(this);
         fimbriae1.setCursor(new Cursor(Cursor.HAND_CURSOR));
 
@@ -181,7 +198,7 @@ public class Baccell extends JFrame implements ActionListener {
         fimbriae2.setBounds(150,420,110,250);
         fimbriae2.setOpaque(false);
         fimbriae2.setContentAreaFilled(false);
-        fimbriae2.setBorderPainted(true);
+        fimbriae2.setBorderPainted(false);
         fimbriae2.addActionListener(this);
         fimbriae2.setCursor(new Cursor(Cursor.HAND_CURSOR));
 
@@ -243,7 +260,7 @@ public class Baccell extends JFrame implements ActionListener {
         nucleoid1.setBounds(450,500,270,110);
         nucleoid1.setOpaque(false);
         nucleoid1.setContentAreaFilled(false);
-        nucleoid1.setBorderPainted(true);
+        nucleoid1.setBorderPainted(false);
         nucleoid1.addActionListener(this);
         nucleoid1.setCursor(new Cursor(Cursor.HAND_CURSOR));
 
@@ -301,6 +318,102 @@ public class Baccell extends JFrame implements ActionListener {
         ribosomesPanelClose.setIcon(porzam);
         ribosomesPanelClose.setBorderPainted(false);
         ribosomesPanelClose.addActionListener(this);
+
+        ribosomes1 = new JButton();
+        ribosomes1.setBounds(350,460,30,30);
+        ribosomes1.setOpaque(false);
+        ribosomes1.setContentAreaFilled(false);
+        ribosomes1.setBorderPainted(false);
+        ribosomes1.addActionListener(this);
+        ribosomes1.setCursor(new Cursor(Cursor.HAND_CURSOR));
+
+        ribosomes2 = new JButton();
+        ribosomes2.setBounds(320,570,30,30);
+        ribosomes2.setOpaque(false);
+        ribosomes2.setContentAreaFilled(false);
+        ribosomes2.setBorderPainted(false);
+        ribosomes2.addActionListener(this);
+        ribosomes2.setCursor(new Cursor(Cursor.HAND_CURSOR));
+
+        ribosomes3 = new JButton();
+        ribosomes3.setBounds(390,629,30,30);
+        ribosomes3.setOpaque(false);
+        ribosomes3.setContentAreaFilled(false);
+        ribosomes3.setBorderPainted(false);
+        ribosomes3.addActionListener(this);
+        ribosomes3.setCursor(new Cursor(Cursor.HAND_CURSOR));
+
+        ribosomes4 = new JButton();
+        ribosomes4.setBounds(430,500,20,30);
+        ribosomes4.setOpaque(false);
+        ribosomes4.setContentAreaFilled(false);
+        ribosomes4.setBorderPainted(false);
+        ribosomes4.addActionListener(this);
+        ribosomes4.setCursor(new Cursor(Cursor.HAND_CURSOR));
+
+        ribosomes5 = new JButton();
+        ribosomes5.setBounds(520,610,30,30);
+        ribosomes5.setOpaque(false);
+        ribosomes5.setContentAreaFilled(false);
+        ribosomes5.setBorderPainted(false);
+        ribosomes5.addActionListener(this);
+        ribosomes5.setCursor(new Cursor(Cursor.HAND_CURSOR));
+
+        ribosomes6 = new JButton();
+        ribosomes6.setBounds(580,620,30,30);
+        ribosomes6.setOpaque(false);
+        ribosomes6.setContentAreaFilled(false);
+        ribosomes6.setBorderPainted(false);
+        ribosomes6.addActionListener(this);
+        ribosomes6.setCursor(new Cursor(Cursor.HAND_CURSOR));
+
+        ribosomes7 = new JButton();
+        ribosomes7.setBounds(580,460,30,30);
+        ribosomes7.setOpaque(false);
+        ribosomes7.setContentAreaFilled(false);
+        ribosomes7.setBorderPainted(false);
+        ribosomes7.addActionListener(this);
+        ribosomes7.setCursor(new Cursor(Cursor.HAND_CURSOR));
+
+        ribosomes8 = new JButton();
+        ribosomes8.setBounds(640,650,30,30);
+        ribosomes8.setOpaque(false);
+        ribosomes8.setContentAreaFilled(false);
+        ribosomes8.setBorderPainted(false);
+        ribosomes8.addActionListener(this);
+        ribosomes8.setCursor(new Cursor(Cursor.HAND_CURSOR));
+
+        ribosomes9 = new JButton();
+        ribosomes9.setBounds(680,630,30,30);
+        ribosomes9.setOpaque(false);
+        ribosomes9.setContentAreaFilled(false);
+        ribosomes9.setBorderPainted(false);
+        ribosomes9.addActionListener(this);
+        ribosomes9.setCursor(new Cursor(Cursor.HAND_CURSOR));
+
+        ribosomes10 = new JButton();
+        ribosomes10.setBounds(740,550,30,30);
+        ribosomes10.setOpaque(false);
+        ribosomes10.setContentAreaFilled(false);
+        ribosomes10.setBorderPainted(false);
+        ribosomes10.addActionListener(this);
+        ribosomes10.setCursor(new Cursor(Cursor.HAND_CURSOR));
+
+        ribosomes11 = new JButton();
+        ribosomes11.setBounds(780,640,30,30);
+        ribosomes11.setOpaque(false);
+        ribosomes11.setContentAreaFilled(false);
+        ribosomes11.setBorderPainted(false);
+        ribosomes11.addActionListener(this);
+        ribosomes11.setCursor(new Cursor(Cursor.HAND_CURSOR));
+
+        ribosomes12 = new JButton();
+        ribosomes12.setBounds(820,580,30,30);
+        ribosomes12.setOpaque(false);
+        ribosomes12.setContentAreaFilled(false);
+        ribosomes12.setBorderPainted(false);
+        ribosomes12.addActionListener(this);
+        ribosomes12.setCursor(new Cursor(Cursor.HAND_CURSOR));
 
         plasmaMembranePanel = new JPanel();
         plasmaMembranePanel.setVisible(true);
@@ -472,7 +585,7 @@ public class Baccell extends JFrame implements ActionListener {
         plasmid1.setBounds(745,480,80,50);
         plasmid1.setOpaque(false);
         plasmid1.setContentAreaFilled(false);
-        plasmid1.setBorderPainted(true);
+        plasmid1.setBorderPainted(false);
         plasmid1.addActionListener(this);
         plasmid1.setCursor(new Cursor(Cursor.HAND_CURSOR));
 
@@ -585,7 +698,47 @@ public class Baccell extends JFrame implements ActionListener {
         capsulePanelClose.setIcon(porzam);
         capsulePanelClose.setBorderPainted(false);
         capsulePanelClose.addActionListener(this);
-        
+
+        capsule1 = new JButton();
+        capsule1.setBounds(260,465,55,210);
+        capsule1.setOpaque(false);
+        capsule1.setContentAreaFilled(false);
+        capsule1.setBorderPainted(false);
+        capsule1.addActionListener(this);
+        capsule1.setCursor(new Cursor(Cursor.HAND_CURSOR));
+
+        capsule2 = new JButton();
+        capsule2.setBounds(315,660,320,50);
+        capsule2.setOpaque(false);
+        capsule2.setContentAreaFilled(false);
+        capsule2.setBorderPainted(false);
+        capsule2.addActionListener(this);
+        capsule2.setCursor(new Cursor(Cursor.HAND_CURSOR));
+
+        capsule3 = new JButton();
+        capsule3.setBounds(635,680,230,50);
+        capsule3.setOpaque(false);
+        capsule3.setContentAreaFilled(false);
+        capsule3.setBorderPainted(false);
+        capsule3.addActionListener(this);
+        capsule3.setCursor(new Cursor(Cursor.HAND_CURSOR));
+
+        capsule4 = new JButton();
+        capsule4.setBounds(850,450,68,250);
+        capsule4.setOpaque(false);
+        capsule4.setContentAreaFilled(false);
+        capsule4.setBorderPainted(false);
+        capsule4.addActionListener(this);
+        capsule4.setCursor(new Cursor(Cursor.HAND_CURSOR));
+
+        capsule5 = new JButton();
+        capsule5.setBounds(340,430,520,30);
+        capsule5.setOpaque(false);
+        capsule5.setContentAreaFilled(false);
+        capsule5.setBorderPainted(false);
+        capsule5.addActionListener(this);
+        capsule5.setCursor(new Cursor(Cursor.HAND_CURSOR));
+
         flagellaPanel = new JPanel();
         flagellaPanel.setVisible(true);
         flagellaPanel.setBounds(930,510,280,40);
@@ -644,7 +797,7 @@ public class Baccell extends JFrame implements ActionListener {
         flagella1.setBounds(80,230,440,140);
         flagella1.setOpaque(false);
         flagella1.setContentAreaFilled(false);
-        flagella1.setBorderPainted(true);
+        flagella1.setBorderPainted(false);
         flagella1.addActionListener(this);
         flagella1.setCursor(new Cursor(Cursor.HAND_CURSOR));
 
@@ -652,7 +805,7 @@ public class Baccell extends JFrame implements ActionListener {
         flagella2.setBounds(80,370,70,170);
         flagella2.setOpaque(false);
         flagella2.setContentAreaFilled(false);
-        flagella2.setBorderPainted(true);
+        flagella2.setBorderPainted(false);
         flagella2.addActionListener(this);
         flagella2.setCursor(new Cursor(Cursor.HAND_CURSOR));
 
@@ -660,7 +813,7 @@ public class Baccell extends JFrame implements ActionListener {
         flagella3.setBounds(400,370,120,60);
         flagella3.setOpaque(false);
         flagella3.setContentAreaFilled(false);
-        flagella3.setBorderPainted(true);
+        flagella3.setBorderPainted(false);
         flagella3.addActionListener(this);
         flagella3.setCursor(new Cursor(Cursor.HAND_CURSOR));
 
@@ -668,7 +821,7 @@ public class Baccell extends JFrame implements ActionListener {
         flagella4.setBounds(190,680,140,200);
         flagella4.setOpaque(false);
         flagella4.setContentAreaFilled(false);
-        flagella4.setBorderPainted(true);
+        flagella4.setBorderPainted(false);
         flagella4.addActionListener(this);
         flagella4.setCursor(new Cursor(Cursor.HAND_CURSOR));
 
@@ -676,10 +829,9 @@ public class Baccell extends JFrame implements ActionListener {
         flagella5.setBounds(330,800,400,150);
         flagella5.setOpaque(false);
         flagella5.setContentAreaFilled(false);
-        flagella5.setBorderPainted(true);
+        flagella5.setBorderPainted(false);
         flagella5.addActionListener(this);
         flagella5.setCursor(new Cursor(Cursor.HAND_CURSOR));
-        flagella5.setBorder(bb);
 
         goBack = new JButton();
         goBack.setBounds(1060,900,120,40);
@@ -718,8 +870,20 @@ public class Baccell extends JFrame implements ActionListener {
         this.add(ribosomesButton);
         this.add(ribosomesPanelDescription);
         ribosomesPanelDescription.add(ribosomesPanelClose);
-        ribosomesPanelDescription.add(ribosomesLabelDescription);        
-        
+        ribosomesPanelDescription.add(ribosomesLabelDescription);
+        this.add(ribosomes1);
+        this.add(ribosomes2);
+        this.add(ribosomes3);
+        this.add(ribosomes4);
+        this.add(ribosomes5);
+        this.add(ribosomes6);
+        this.add(ribosomes7);
+        this.add(ribosomes8);
+        this.add(ribosomes9);
+        this.add(ribosomes10);
+        this.add(ribosomes11);
+        this.add(ribosomes12);
+
         this.add(plasmaMembranePanel);
         plasmaMembranePanel.add(plasmaMembraneLabel);
         this.add(plasmaMembraneButton);
@@ -755,7 +919,12 @@ public class Baccell extends JFrame implements ActionListener {
         this.add(capsulePanelDescription);
         capsulePanelDescription.add(capsulePanelClose);
         capsulePanelDescription.add(capsuleLabelDescription);
-        
+        this.add(capsule1);
+        this.add(capsule2);
+        this.add(capsule3);
+        this.add(capsule4);
+        this.add(capsule5);
+
         this.add(flagellaPanel);
         flagellaPanel.add(flagellaLabel);
         this.add(flagellaButton);
@@ -831,6 +1000,42 @@ public class Baccell extends JFrame implements ActionListener {
             ribosomesLabelGreen.setOpaque(true);
             ribosomesPanel.add(ribosomesLabelGreen);
         }
+        if(e.getSource()==ribosomes1){
+            ribosomesPanelDescription.setVisible(true);
+        }
+        if(e.getSource()==ribosomes2){
+            ribosomesPanelDescription.setVisible(true);
+        }
+        if(e.getSource()==ribosomes3){
+            ribosomesPanelDescription.setVisible(true);
+        }
+        if(e.getSource()==ribosomes4){
+            ribosomesPanelDescription.setVisible(true);
+        }
+        if(e.getSource()==ribosomes5){
+            ribosomesPanelDescription.setVisible(true);
+        }
+        if(e.getSource()==ribosomes6){
+            ribosomesPanelDescription.setVisible(true);
+        }
+        if(e.getSource()==ribosomes7){
+            ribosomesPanelDescription.setVisible(true);
+        }
+        if(e.getSource()==ribosomes8){
+            ribosomesPanelDescription.setVisible(true);
+        }
+        if(e.getSource()==ribosomes9){
+            ribosomesPanelDescription.setVisible(true);
+        }
+        if(e.getSource()==ribosomes10){
+            ribosomesPanelDescription.setVisible(true);
+        }
+        if(e.getSource()==ribosomes11){
+            ribosomesPanelDescription.setVisible(true);
+        }
+        if(e.getSource()==ribosomes12){
+            ribosomesPanelDescription.setVisible(true);
+        }
         if(e.getSource()==plasmaMembraneButton){
             plasmaMembranePanelDescription.setVisible(true);
         }
@@ -898,6 +1103,21 @@ public class Baccell extends JFrame implements ActionListener {
             capsuleLabelGreen.setVisible(true);
             capsuleLabelGreen.setOpaque(true);
             capsulePanel.add(capsuleLabelGreen);
+        }
+        if(e.getSource()==capsule1){
+            capsulePanelDescription.setVisible(true);
+        }
+        if(e.getSource()==capsule2){
+            capsulePanelDescription.setVisible(true);
+        }
+        if(e.getSource()==capsule3){
+            capsulePanelDescription.setVisible(true);
+        }
+        if(e.getSource()==capsule4){
+            capsulePanelDescription.setVisible(true);
+        }
+        if(e.getSource()==capsule5){
+            capsulePanelDescription.setVisible(true);
         }
         if(e.getSource()==flagellaButton){
             flagellaPanelDescription.setVisible(true);
