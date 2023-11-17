@@ -16,6 +16,7 @@ public class Funcell extends JFrame implements ActionListener {
     JLabel nucleusLabelDescription;
     JButton nucleusPanelClose;
     JLabel nucleusLabelGreen;
+    JButton nucleus1;
 
     JPanel mitochondrionPanel;
     JLabel mitochondrionLabel;
@@ -24,6 +25,11 @@ public class Funcell extends JFrame implements ActionListener {
     JLabel mitochondrionLabelDescription;
     JButton mitochondrionPanelClose;
     JLabel mitochondrionLabelGreen;
+    JButton mitochondrion1;
+    JButton mitochondrion2;
+    JButton mitochondrion3;
+    JButton mitochondrion4;
+    JButton mitochondrion5;
 
     JPanel ribosomesPanel;
     JLabel ribosomesLabel;
@@ -32,6 +38,13 @@ public class Funcell extends JFrame implements ActionListener {
     JLabel ribosomesLabelDescription;
     JButton ribosomesPanelClose;
     JLabel ribosomesLabelGreen;
+    JButton ribosomes1;
+    JButton ribosomes2;
+    JButton ribosomes3;
+    JButton ribosomes4;
+    JButton ribosomes5;
+    JButton ribosomes6;
+    JButton ribosomes7;
 
     JPanel plasmaMembranePanel;
     JLabel plasmaMembraneLabel;
@@ -48,6 +61,9 @@ public class Funcell extends JFrame implements ActionListener {
     JLabel cellWallLabelDescription;
     JButton cellWallPanelClose;
     JLabel cellWallLabelGreen;
+    JButton cellWall1;
+    JButton cellWall2;
+    JButton cellWall3;
 
     JPanel vacuolePanel;
     JLabel vacuoleLabel;
@@ -56,6 +72,10 @@ public class Funcell extends JFrame implements ActionListener {
     JLabel vacuoleLabelDescription;
     JButton vacuolePanelClose;
     JLabel vacuoleLabelGreen;
+    JButton vacuole1;
+    JButton vacuole2;
+    JButton vacuole3;
+    JButton vacuole4;
 
     JPanel cellulosePanel;
     JLabel celluloseLabel;
@@ -72,6 +92,10 @@ public class Funcell extends JFrame implements ActionListener {
     JLabel roughEndoplasmicReticulumLabelDescription;
     JButton roughEndoplasmicReticulumPanelClose;
     JLabel roughEndoplasmicReticulumLabelGreen;
+    JButton roughEndoplasmicReticulum1;
+    JButton roughEndoplasmicReticulum2;
+    JButton roughEndoplasmicReticulum3;
+    JButton roughEndoplasmicReticulum4;
 
     JPanel golgiApparatusPanel;
     JLabel golgiApparatusLabel;
@@ -80,9 +104,12 @@ public class Funcell extends JFrame implements ActionListener {
     JLabel golgiApparatusLabelDescription;
     JButton golgiApparatusPanelClose;
     JLabel golgiApparatusLabelGreen;
+    JButton golgiApparatus1;
 
     JButton goBack;
     String passone;
+    JProgressBar progressBar = new JProgressBar();
+    int i=0;
 
     public Funcell(String passone) {
         this.passone = passone;
@@ -90,13 +117,22 @@ public class Funcell extends JFrame implements ActionListener {
         JLabel label = new JLabel();
         label.setIcon(background);
 
-        //Border border = BorderFactory.createLineBorder(Color.green, 5);
+        Border border = BorderFactory.createLineBorder(Color.BLUE, 1);
+        Border bb = BorderFactory.createLineBorder(Color.RED, 1);
+
+        progressBar.setValue(0);
+        progressBar.setBounds(390,120,500,50);
+        progressBar.setStringPainted(true);
+        progressBar.setBorderPainted(true);
+        progressBar.setBorder(border);
+        progressBar.setForeground(Color.green);
+        progressBar.setBackground(Color.RED);
+
         nucleusPanel = new JPanel();
         nucleusPanel.setVisible(true);
         nucleusPanel.setBounds(930,190,280,40);
         nucleusPanel.setLayout(new BorderLayout());
         nucleusPanel.setBackground(new Color(0x6af6be));
-        //nucleusPanel.setBorder(border);
 
         nucleusLabel = new JLabel();
         nucleusLabel.setBounds(0, 0, 200, 100);
@@ -126,7 +162,6 @@ public class Funcell extends JFrame implements ActionListener {
         nucleusPanelDescription.setBounds(230,190,700,250);
         nucleusPanelDescription.setLayout(new BorderLayout());
         nucleusPanelDescription.setBackground(Color.cyan);
-        //nucleusPanelDescription.setBorder(border);
 
         nucleusLabelDescription = new JLabel();
         nucleusLabelDescription.setVerticalAlignment(JLabel.CENTER);
@@ -150,12 +185,19 @@ public class Funcell extends JFrame implements ActionListener {
         nucleusPanelClose.setBorderPainted(false);
         nucleusPanelClose.addActionListener(this);
 
+        nucleus1 = new JButton();
+        nucleus1.setBounds(335,470,170,150);
+        nucleus1.setOpaque(false);
+        nucleus1.setContentAreaFilled(false);
+        nucleus1.setBorderPainted(false);
+        nucleus1.addActionListener(this);
+        nucleus1.setCursor(new Cursor(Cursor.HAND_CURSOR));
+
         mitochondrionPanel = new JPanel();
         mitochondrionPanel.setVisible(true);
         mitochondrionPanel.setBounds(930,230,280,40);
         mitochondrionPanel.setLayout(new BorderLayout());
         mitochondrionPanel.setBackground(new Color(0x6af6be));
-        //mitochondrionPanel.setBorder(border);
 
         mitochondrionLabel = new JLabel();
         mitochondrionLabel.setBounds(0, 0, 200, 100);
@@ -185,7 +227,6 @@ public class Funcell extends JFrame implements ActionListener {
         mitochondrionPanelDescription.setBounds(230,190,700,250);
         mitochondrionPanelDescription.setLayout(new BorderLayout());
         mitochondrionPanelDescription.setBackground(Color.cyan);
-        //mitochondrionPanelDescription.setBorder(border);
 
         mitochondrionLabelDescription = new JLabel();
         mitochondrionLabelDescription.setVerticalAlignment(JLabel.CENTER);
@@ -206,12 +247,51 @@ public class Funcell extends JFrame implements ActionListener {
         mitochondrionPanelClose.setBorderPainted(false);
         mitochondrionPanelClose.addActionListener(this);
 
+        mitochondrion1 = new JButton();
+        mitochondrion1.setBounds(80,550,60,100);
+        mitochondrion1.setOpaque(false);
+        mitochondrion1.setContentAreaFilled(false);
+        mitochondrion1.setBorderPainted(false);
+        mitochondrion1.addActionListener(this);
+        mitochondrion1.setCursor(new Cursor(Cursor.HAND_CURSOR));
+
+        mitochondrion2 = new JButton();
+        mitochondrion2.setBounds(670,490,60,90);
+        mitochondrion2.setOpaque(false);
+        mitochondrion2.setContentAreaFilled(false);
+        mitochondrion2.setBorderPainted(false);
+        mitochondrion2.addActionListener(this);
+        mitochondrion2.setCursor(new Cursor(Cursor.HAND_CURSOR));
+
+        mitochondrion3 = new JButton();
+        mitochondrion3.setBounds(315,780,100,60);
+        mitochondrion3.setOpaque(false);
+        mitochondrion3.setContentAreaFilled(false);
+        mitochondrion3.setBorderPainted(false);
+        mitochondrion3.addActionListener(this);
+        mitochondrion3.setCursor(new Cursor(Cursor.HAND_CURSOR));
+
+        mitochondrion4 = new JButton();
+        mitochondrion4.setBounds(400,250,90,60);
+        mitochondrion4.setOpaque(false);
+        mitochondrion4.setContentAreaFilled(false);
+        mitochondrion4.setBorderPainted(false);
+        mitochondrion4.addActionListener(this);
+        mitochondrion4.setCursor(new Cursor(Cursor.HAND_CURSOR));
+
+        mitochondrion5 = new JButton();
+        mitochondrion5.setBounds(570,300,70,80);
+        mitochondrion5.setOpaque(false);
+        mitochondrion5.setContentAreaFilled(false);
+        mitochondrion5.setBorderPainted(false);
+        mitochondrion5.addActionListener(this);
+        mitochondrion5.setCursor(new Cursor(Cursor.HAND_CURSOR));
+
         ribosomesPanel = new JPanel();
         ribosomesPanel.setVisible(true);
         ribosomesPanel.setBounds(930,270,280,40);
         ribosomesPanel.setLayout(new BorderLayout());
         ribosomesPanel.setBackground(new Color(0x6af6be));
-        //ribosomesPanel.setBorder(border);
 
         ribosomesLabel = new JLabel();
         ribosomesLabel.setBounds(0, 0, 200, 100);
@@ -241,7 +321,6 @@ public class Funcell extends JFrame implements ActionListener {
         ribosomesPanelDescription.setBounds(230,190,700,250);
         ribosomesPanelDescription.setLayout(new BorderLayout());
         ribosomesPanelDescription.setBackground(Color.cyan);
-        //ribosomesPanelDescription.setBorder(border);
 
         ribosomesLabelDescription = new JLabel();
         ribosomesLabelDescription.setVerticalAlignment(JLabel.CENTER);
@@ -259,12 +338,67 @@ public class Funcell extends JFrame implements ActionListener {
         ribosomesPanelClose.setBorderPainted(false);
         ribosomesPanelClose.addActionListener(this);
 
+        ribosomes1 = new JButton();
+        ribosomes1.setBounds(340,300,20,20);
+        ribosomes1.setOpaque(false);
+        ribosomes1.setContentAreaFilled(false);
+        ribosomes1.setBorderPainted(false);
+        ribosomes1.addActionListener(this);
+        ribosomes1.setCursor(new Cursor(Cursor.HAND_CURSOR));
+
+        ribosomes2 = new JButton();
+        ribosomes2.setBounds(630,413,20,20);
+        ribosomes2.setOpaque(false);
+        ribosomes2.setContentAreaFilled(false);
+        ribosomes2.setBorderPainted(false);
+        ribosomes2.addActionListener(this);
+        ribosomes2.setCursor(new Cursor(Cursor.HAND_CURSOR));
+
+        ribosomes3 = new JButton();
+        ribosomes3.setBounds(605,500,20,20);
+        ribosomes3.setOpaque(false);
+        ribosomes3.setContentAreaFilled(false);
+        ribosomes3.setBorderPainted(false);
+        ribosomes3.addActionListener(this);
+        ribosomes3.setCursor(new Cursor(Cursor.HAND_CURSOR));
+
+        ribosomes4 = new JButton();
+        ribosomes4.setBounds(595,620,20,20);
+        ribosomes4.setOpaque(false);
+        ribosomes4.setContentAreaFilled(false);
+        ribosomes4.setBorderPainted(false);
+        ribosomes4.addActionListener(this);
+        ribosomes4.setCursor(new Cursor(Cursor.HAND_CURSOR));
+
+        ribosomes5 = new JButton();
+        ribosomes5.setBounds(715,610,20,20);
+        ribosomes5.setOpaque(false);
+        ribosomes5.setContentAreaFilled(false);
+        ribosomes5.setBorderPainted(false);
+        ribosomes5.addActionListener(this);
+        ribosomes5.setCursor(new Cursor(Cursor.HAND_CURSOR));
+
+        ribosomes6 = new JButton();
+        ribosomes6.setBounds(430,765,20,20);
+        ribosomes6.setOpaque(false);
+        ribosomes6.setContentAreaFilled(false);
+        ribosomes6.setBorderPainted(false);
+        ribosomes6.addActionListener(this);
+        ribosomes6.setCursor(new Cursor(Cursor.HAND_CURSOR));
+
+        ribosomes7 = new JButton();
+        ribosomes7.setBounds(185,665,20,20);
+        ribosomes7.setOpaque(false);
+        ribosomes7.setContentAreaFilled(false);
+        ribosomes7.setBorderPainted(false);
+        ribosomes7.addActionListener(this);
+        ribosomes7.setCursor(new Cursor(Cursor.HAND_CURSOR));
+
         plasmaMembranePanel = new JPanel();
         plasmaMembranePanel.setVisible(true);
         plasmaMembranePanel.setBounds(930,310,280,40);
         plasmaMembranePanel.setLayout(new BorderLayout());
         plasmaMembranePanel.setBackground(new Color(0x6af6be));
-        //plasmaMembranePanel.setBorder(border);
 
         plasmaMembraneLabel = new JLabel();
         plasmaMembraneLabel.setBounds(0, 0, 200, 100);
@@ -294,7 +428,6 @@ public class Funcell extends JFrame implements ActionListener {
         plasmaMembranePanelDescription.setBounds(230,190,700,250);
         plasmaMembranePanelDescription.setLayout(new BorderLayout());
         plasmaMembranePanelDescription.setBackground(Color.cyan);
-        //plasmaMembranePanelDescription.setBorder(border);
 
         plasmaMembraneLabelDescription = new JLabel();
         plasmaMembraneLabelDescription.setVerticalAlignment(JLabel.CENTER);
@@ -320,7 +453,6 @@ public class Funcell extends JFrame implements ActionListener {
         cellWallPanel.setBounds(930,350,280,40);
         cellWallPanel.setLayout(new BorderLayout());
         cellWallPanel.setBackground(new Color(0x6af6be));
-        //cellWallPanel.setBorder(border);
 
         cellWallLabel = new JLabel();
         cellWallLabel.setBounds(0, 0, 200, 100);
@@ -350,7 +482,6 @@ public class Funcell extends JFrame implements ActionListener {
         cellWallPanelDescription.setBounds(230,190,700,250);
         cellWallPanelDescription.setLayout(new BorderLayout());
         cellWallPanelDescription.setBackground(Color.cyan);
-        //cellWallPanelDescription.setBorder(border);
 
         cellWallLabelDescription = new JLabel();
         cellWallLabelDescription.setVerticalAlignment(JLabel.CENTER);
@@ -371,12 +502,35 @@ public class Funcell extends JFrame implements ActionListener {
         cellWallPanelClose.setBorderPainted(false);
         cellWallPanelClose.addActionListener(this);
 
+        cellWall1 = new JButton();
+        cellWall1.setBounds(105,845,500,120);
+        cellWall1.setOpaque(false);
+        cellWall1.setContentAreaFilled(false);
+        cellWall1.setBorderPainted(false);
+        cellWall1.addActionListener(this);
+        cellWall1.setCursor(new Cursor(Cursor.HAND_CURSOR));
+
+        cellWall2 = new JButton();
+        cellWall2.setBounds(185,170,400,80);
+        cellWall2.setOpaque(false);
+        cellWall2.setContentAreaFilled(false);
+        cellWall2.setBorderPainted(false);
+        cellWall2.addActionListener(this);
+        cellWall2.setCursor(new Cursor(Cursor.HAND_CURSOR));
+
+        cellWall3 = new JButton();
+        cellWall3.setBounds(0,400,70,400);
+        cellWall3.setOpaque(false);
+        cellWall3.setContentAreaFilled(false);
+        cellWall3.setBorderPainted(false);
+        cellWall3.addActionListener(this);
+        cellWall3.setCursor(new Cursor(Cursor.HAND_CURSOR));
+
         vacuolePanel = new JPanel();
         vacuolePanel.setVisible(true);
         vacuolePanel.setBounds(930,390,280,40);
         vacuolePanel.setLayout(new BorderLayout());
         vacuolePanel.setBackground(new Color(0x6af6be));
-        //vacuolePanel.setBorder(border);
 
         vacuoleLabel = new JLabel();
         vacuoleLabel.setBounds(0, 0, 200, 100);
@@ -406,7 +560,6 @@ public class Funcell extends JFrame implements ActionListener {
         vacuolePanelDescription.setBounds(230,190,700,250);
         vacuolePanelDescription.setLayout(new BorderLayout());
         vacuolePanelDescription.setBackground(Color.cyan);
-        //vacuolePanelDescription.setBorder(border);
 
         vacuoleLabelDescription = new JLabel();
         vacuoleLabelDescription.setVerticalAlignment(JLabel.CENTER);
@@ -427,12 +580,43 @@ public class Funcell extends JFrame implements ActionListener {
         vacuolePanelClose.setBorderPainted(false);
         vacuolePanelClose.addActionListener(this);
 
+        vacuole1 = new JButton();
+        vacuole1.setBounds(80,440,150,110);
+        vacuole1.setOpaque(false);
+        vacuole1.setContentAreaFilled(false);
+        vacuole1.setBorderPainted(false);
+        vacuole1.addActionListener(this);
+        vacuole1.setCursor(new Cursor(Cursor.HAND_CURSOR));
+
+        vacuole2 = new JButton();
+        vacuole2.setBounds(100,320,180,120);
+        vacuole2.setOpaque(false);
+        vacuole2.setContentAreaFilled(false);
+        vacuole2.setBorderPainted(false);
+        vacuole2.addActionListener(this);
+        vacuole2.setCursor(new Cursor(Cursor.HAND_CURSOR));
+
+        vacuole3 = new JButton();
+        vacuole3.setBounds(600,640,120,170);
+        vacuole3.setOpaque(false);
+        vacuole3.setContentAreaFilled(false);
+        vacuole3.setBorderPainted(false);
+        vacuole3.addActionListener(this);
+        vacuole3.setCursor(new Cursor(Cursor.HAND_CURSOR));
+
+        vacuole4 = new JButton();
+        vacuole4.setBounds(500,720,100,100);
+        vacuole4.setOpaque(false);
+        vacuole4.setContentAreaFilled(false);
+        vacuole4.setBorderPainted(false);
+        vacuole4.addActionListener(this);
+        vacuole4.setCursor(new Cursor(Cursor.HAND_CURSOR));
+
         cellulosePanel = new JPanel();
         cellulosePanel.setVisible(true);
         cellulosePanel.setBounds(930,430,280,40);
         cellulosePanel.setLayout(new BorderLayout());
         cellulosePanel.setBackground(new Color(0x6af6be));
-        //cellulosePanel.setBorder(border);
 
         celluloseLabel = new JLabel();
         celluloseLabel.setBounds(0, 0, 200, 100);
@@ -462,7 +646,6 @@ public class Funcell extends JFrame implements ActionListener {
         cellulosePanelDescription.setBounds(230,190,700,250);
         cellulosePanelDescription.setLayout(new BorderLayout());
         cellulosePanelDescription.setBackground(Color.cyan);
-        //cellulosePanelDescription.setBorder(border);
 
         celluloseLabelDescription = new JLabel();
         celluloseLabelDescription.setVerticalAlignment(JLabel.CENTER);
@@ -487,7 +670,6 @@ public class Funcell extends JFrame implements ActionListener {
         roughEndoplasmicReticulumPanel.setBounds(930,470,280,40);
         roughEndoplasmicReticulumPanel.setLayout(new BorderLayout());
         roughEndoplasmicReticulumPanel.setBackground(new Color(0x6af6be));
-        //roughEndoplasmicReticulumPanel.setBorder(border);
 
         roughEndoplasmicReticulumLabel = new JLabel();
         roughEndoplasmicReticulumLabel.setBounds(0, 0, 200, 100);
@@ -517,7 +699,6 @@ public class Funcell extends JFrame implements ActionListener {
         roughEndoplasmicReticulumPanelDescription.setBounds(230,190,700,250);
         roughEndoplasmicReticulumPanelDescription.setLayout(new BorderLayout());
         roughEndoplasmicReticulumPanelDescription.setBackground(Color.cyan);
-        //roughEndoplasmicReticulumPanelDescription.setBorder(border);
 
         roughEndoplasmicReticulumLabelDescription = new JLabel();
         roughEndoplasmicReticulumLabelDescription.setVerticalAlignment(JLabel.CENTER);
@@ -537,12 +718,43 @@ public class Funcell extends JFrame implements ActionListener {
         roughEndoplasmicReticulumPanelClose.setBorderPainted(false);
         roughEndoplasmicReticulumPanelClose.addActionListener(this);
 
+        roughEndoplasmicReticulum1 = new JButton();
+        roughEndoplasmicReticulum1.setBounds(505,470,80,220);
+        roughEndoplasmicReticulum1.setOpaque(false);
+        roughEndoplasmicReticulum1.setContentAreaFilled(false);
+        roughEndoplasmicReticulum1.setBorderPainted(false);
+        roughEndoplasmicReticulum1.addActionListener(this);
+        roughEndoplasmicReticulum1.setCursor(new Cursor(Cursor.HAND_CURSOR));
+
+        roughEndoplasmicReticulum2 = new JButton();
+        roughEndoplasmicReticulum2.setBounds(250,630,250,90);
+        roughEndoplasmicReticulum2.setOpaque(false);
+        roughEndoplasmicReticulum2.setContentAreaFilled(false);
+        roughEndoplasmicReticulum2.setBorderPainted(false);
+        roughEndoplasmicReticulum2.addActionListener(this);
+        roughEndoplasmicReticulum2.setCursor(new Cursor(Cursor.HAND_CURSOR));
+
+        roughEndoplasmicReticulum3 = new JButton();
+        roughEndoplasmicReticulum3.setBounds(230,440,105,190);
+        roughEndoplasmicReticulum3.setOpaque(false);
+        roughEndoplasmicReticulum3.setContentAreaFilled(false);
+        roughEndoplasmicReticulum3.setBorderPainted(false);
+        roughEndoplasmicReticulum3.addActionListener(this);
+        roughEndoplasmicReticulum3.setCursor(new Cursor(Cursor.HAND_CURSOR));
+
+        roughEndoplasmicReticulum4 = new JButton();
+        roughEndoplasmicReticulum4.setBounds(335,370,200,100);
+        roughEndoplasmicReticulum4.setOpaque(false);
+        roughEndoplasmicReticulum4.setContentAreaFilled(false);
+        roughEndoplasmicReticulum4.setBorderPainted(false);
+        roughEndoplasmicReticulum4.addActionListener(this);
+        roughEndoplasmicReticulum4.setCursor(new Cursor(Cursor.HAND_CURSOR));
+
         golgiApparatusPanel = new JPanel();
         golgiApparatusPanel.setVisible(true);
         golgiApparatusPanel.setBounds(930,510,280,40);
         golgiApparatusPanel.setLayout(new BorderLayout());
         golgiApparatusPanel.setBackground(new Color(0x6af6be));
-        //golgiApparatusPanel.setBorder(border);
 
         golgiApparatusLabel = new JLabel();
         golgiApparatusLabel.setBounds(0, 0, 200, 100);
@@ -572,7 +784,6 @@ public class Funcell extends JFrame implements ActionListener {
         golgiApparatusPanelDescription.setBounds(230,190,700,250);
         golgiApparatusPanelDescription.setLayout(new BorderLayout());
         golgiApparatusPanelDescription.setBackground(Color.cyan);
-        //golgiApparatusPanelDescription.setBorder(border);
 
         golgiApparatusLabelDescription = new JLabel();
         golgiApparatusLabelDescription.setVerticalAlignment(JLabel.CENTER);
@@ -591,6 +802,14 @@ public class Funcell extends JFrame implements ActionListener {
         golgiApparatusPanelClose.setIcon(porzam);
         golgiApparatusPanelClose.setBorderPainted(false);
         golgiApparatusPanelClose.addActionListener(this);
+
+        golgiApparatus1 = new JButton();
+        golgiApparatus1.setBounds(160,730,110,110);
+        golgiApparatus1.setOpaque(false);
+        golgiApparatus1.setContentAreaFilled(false);
+        golgiApparatus1.setBorderPainted(false);
+        golgiApparatus1.addActionListener(this);
+        golgiApparatus1.setCursor(new Cursor(Cursor.HAND_CURSOR));
 
         goBack = new JButton();
         goBack.setBounds(1060,900,120,40);
@@ -613,6 +832,7 @@ public class Funcell extends JFrame implements ActionListener {
         this.add(nucleusPanelDescription);
         nucleusPanelDescription.add(nucleusPanelClose);
         nucleusPanelDescription.add(nucleusLabelDescription);
+        this.add(nucleus1);
 
         this.add(mitochondrionPanel);
         mitochondrionPanel.add(mitochondrionLabel);
@@ -620,6 +840,11 @@ public class Funcell extends JFrame implements ActionListener {
         this.add(mitochondrionPanelDescription);
         mitochondrionPanelDescription.add(mitochondrionPanelClose);
         mitochondrionPanelDescription.add(mitochondrionLabelDescription);
+        this.add(mitochondrion1);
+        this.add(mitochondrion2);
+        this.add(mitochondrion3);
+        this.add(mitochondrion4);
+        this.add(mitochondrion5);
 
         this.add(ribosomesPanel);
         ribosomesPanel.add(ribosomesLabel);
@@ -627,6 +852,13 @@ public class Funcell extends JFrame implements ActionListener {
         this.add(ribosomesPanelDescription);
         ribosomesPanelDescription.add(ribosomesPanelClose);
         ribosomesPanelDescription.add(ribosomesLabelDescription);
+        this.add(ribosomes1);
+        this.add(ribosomes2);
+        this.add(ribosomes3);
+        this.add(ribosomes4);
+        this.add(ribosomes5);
+        this.add(ribosomes6);
+        this.add(ribosomes7);
 
         this.add(plasmaMembranePanel);
         plasmaMembranePanel.add(plasmaMembraneLabel);
@@ -641,6 +873,9 @@ public class Funcell extends JFrame implements ActionListener {
         this.add(cellWallPanelDescription);
         cellWallPanelDescription.add(cellWallPanelClose);
         cellWallPanelDescription.add(cellWallLabelDescription);
+        this.add(cellWall1);
+        this.add(cellWall2);
+        this.add(cellWall3);
 
         this.add(vacuolePanel);
         vacuolePanel.add(vacuoleLabel);
@@ -648,6 +883,10 @@ public class Funcell extends JFrame implements ActionListener {
         this.add(vacuolePanelDescription);
         vacuolePanelDescription.add(vacuolePanelClose);
         vacuolePanelDescription.add(vacuoleLabelDescription);
+        this.add(vacuole1);
+        this.add(vacuole2);
+        this.add(vacuole3);
+        this.add(vacuole4);
 
         this.add(cellulosePanel);
         cellulosePanel.add(celluloseLabel);
@@ -662,6 +901,10 @@ public class Funcell extends JFrame implements ActionListener {
         this.add(roughEndoplasmicReticulumPanelDescription);
         roughEndoplasmicReticulumPanelDescription.add(roughEndoplasmicReticulumPanelClose);
         roughEndoplasmicReticulumPanelDescription.add(roughEndoplasmicReticulumLabelDescription);
+        this.add(roughEndoplasmicReticulum1);
+        this.add(roughEndoplasmicReticulum2);
+        this.add(roughEndoplasmicReticulum3);
+        this.add(roughEndoplasmicReticulum4);
 
         this.add(golgiApparatusPanel);
         golgiApparatusPanel.add(golgiApparatusLabel);
@@ -669,8 +912,9 @@ public class Funcell extends JFrame implements ActionListener {
         this.add(golgiApparatusPanelDescription);
         golgiApparatusPanelDescription.add(golgiApparatusPanelClose);
         golgiApparatusPanelDescription.add(golgiApparatusLabelDescription);
+        this.add(golgiApparatus1);
 
-
+        this.add(progressBar);
         this.add(label);
 
         ImageIcon logo = new ImageIcon("src/resources/logo.jpg");
@@ -689,36 +933,87 @@ public class Funcell extends JFrame implements ActionListener {
             nucleusPanelDescription.setVisible(true);
         }
         if(e.getSource()==nucleusPanelClose){
+            if(!nucleusLabelGreen.isVisible()){
+                progressBar.setValue(i=i+12);
+            }
             nucleusPanelDescription.setVisible(false);
             nucleusLabel.setVisible(false);
             nucleusLabelGreen.setVisible(true);
             nucleusLabelGreen.setOpaque(true);
             nucleusPanel.add(nucleusLabelGreen);
         }
+        if(e.getSource()==nucleus1){
+            nucleusPanelDescription.setVisible(true);
+        }
         if(e.getSource()==mitochondrionButton){
             mitochondrionPanelDescription.setVisible(true);
         }
         if(e.getSource()==mitochondrionPanelClose){
+            if(!mitochondrionLabelGreen.isVisible()){
+                progressBar.setValue(i=i+11);
+            }
             mitochondrionPanelDescription.setVisible(false);
             mitochondrionLabel.setVisible(false);
             mitochondrionLabelGreen.setVisible(true);
             mitochondrionLabelGreen.setOpaque(true);
             mitochondrionPanel.add(mitochondrionLabelGreen);
         }
+        if(e.getSource()==mitochondrion1){
+            mitochondrionPanelDescription.setVisible(true);
+        }
+        if(e.getSource()==mitochondrion2){
+            mitochondrionPanelDescription.setVisible(true);
+        }
+        if(e.getSource()==mitochondrion3){
+            mitochondrionPanelDescription.setVisible(true);
+        }
+        if(e.getSource()==mitochondrion4){
+            mitochondrionPanelDescription.setVisible(true);
+        }
+        if(e.getSource()==mitochondrion5){
+            mitochondrionPanelDescription.setVisible(true);
+        }
         if(e.getSource()==ribosomesButton){
             ribosomesPanelDescription.setVisible(true);
         }
         if(e.getSource()==ribosomesPanelClose){
+            if(!ribosomesLabelGreen.isVisible()){
+                progressBar.setValue(i=i+11);
+            }
             ribosomesPanelDescription.setVisible(false);
             ribosomesLabel.setVisible(false);
             ribosomesLabelGreen.setVisible(true);
             ribosomesLabelGreen.setOpaque(true);
             ribosomesPanel.add(ribosomesLabelGreen);
         }
+        if(e.getSource()==ribosomes1){
+            ribosomesPanelDescription.setVisible(true);
+        }
+        if(e.getSource()==ribosomes2){
+            ribosomesPanelDescription.setVisible(true);
+        }
+        if(e.getSource()==ribosomes3){
+            ribosomesPanelDescription.setVisible(true);
+        }
+        if(e.getSource()==ribosomes4){
+            ribosomesPanelDescription.setVisible(true);
+        }
+        if(e.getSource()==ribosomes5){
+            ribosomesPanelDescription.setVisible(true);
+        }
+        if(e.getSource()==ribosomes6){
+            ribosomesPanelDescription.setVisible(true);
+        }
+        if(e.getSource()==ribosomes7){
+            ribosomesPanelDescription.setVisible(true);
+        }
         if(e.getSource()==plasmaMembraneButton){
             plasmaMembranePanelDescription.setVisible(true);
         }
         if(e.getSource()==plasmaMembranePanelClose){
+            if(!plasmaMembraneLabelGreen.isVisible()){
+                progressBar.setValue(i=i+11);
+            }
             plasmaMembranePanelDescription.setVisible(false);
             plasmaMembraneLabel.setVisible(false);
             plasmaMembraneLabelGreen.setVisible(true);
@@ -729,26 +1024,56 @@ public class Funcell extends JFrame implements ActionListener {
             cellWallPanelDescription.setVisible(true);
         }
         if(e.getSource()==cellWallPanelClose){
+            if(!celluloseLabelGreen.isVisible()){
+                progressBar.setValue(i=i+11);
+            }
             cellWallPanelDescription.setVisible(false);
             cellWallLabel.setVisible(false);
             cellWallLabelGreen.setVisible(true);
             cellWallLabelGreen.setOpaque(true);
             cellWallPanel.add(cellWallLabelGreen);
         }
+        if(e.getSource()==cellWall1){
+            cellWallPanelDescription.setVisible(true);
+        }
+        if(e.getSource()==cellWall2){
+            cellWallPanelDescription.setVisible(true);
+        }
+        if(e.getSource()==cellWall3){
+            cellWallPanelDescription.setVisible(true);
+        }
         if(e.getSource()==vacuoleButton){
             vacuolePanelDescription.setVisible(true);
         }
         if(e.getSource()==vacuolePanelClose){
+            if(!vacuoleLabelGreen.isVisible()){
+                progressBar.setValue(i=i+11);
+            }
             vacuolePanelDescription.setVisible(false);
             vacuoleLabel.setVisible(false);
             vacuoleLabelGreen.setVisible(true);
             vacuoleLabelGreen.setOpaque(true);
             vacuolePanel.add(vacuoleLabelGreen);
         }
+        if(e.getSource()==vacuole1){
+            vacuolePanelDescription.setVisible(true);
+        }
+        if(e.getSource()==vacuole2){
+            vacuolePanelDescription.setVisible(true);
+        }
+        if(e.getSource()==vacuole3){
+            vacuolePanelDescription.setVisible(true);
+        }
+        if(e.getSource()==vacuole4){
+            vacuolePanelDescription.setVisible(true);
+        }
         if(e.getSource()==celluloseButton){
             cellulosePanelDescription.setVisible(true);
         }
         if(e.getSource()==cellulosePanelClose){
+            if(!celluloseLabelGreen.isVisible()){
+                progressBar.setValue(i=i+11);
+            }
             cellulosePanelDescription.setVisible(false);
             celluloseLabel.setVisible(false);
             celluloseLabelGreen.setVisible(true);
@@ -759,21 +1084,42 @@ public class Funcell extends JFrame implements ActionListener {
             roughEndoplasmicReticulumPanelDescription.setVisible(true);
         }
         if(e.getSource()==roughEndoplasmicReticulumPanelClose){
+            if(!roughEndoplasmicReticulumLabelGreen.isVisible()){
+                progressBar.setValue(i=i+11);
+            }
             roughEndoplasmicReticulumPanelDescription.setVisible(false);
             roughEndoplasmicReticulumLabel.setVisible(false);
             roughEndoplasmicReticulumLabelGreen.setVisible(true);
             roughEndoplasmicReticulumLabelGreen.setOpaque(true);
             roughEndoplasmicReticulumPanel.add(roughEndoplasmicReticulumLabelGreen);
         }
+        if(e.getSource()==roughEndoplasmicReticulum1){
+            roughEndoplasmicReticulumPanelDescription.setVisible(true);
+        }
+        if(e.getSource()==roughEndoplasmicReticulum2){
+            roughEndoplasmicReticulumPanelDescription.setVisible(true);
+        }
+        if(e.getSource()==roughEndoplasmicReticulum3){
+            roughEndoplasmicReticulumPanelDescription.setVisible(true);
+        }
+        if(e.getSource()==roughEndoplasmicReticulum4){
+            roughEndoplasmicReticulumPanelDescription.setVisible(true);
+        }
         if(e.getSource()==golgiApparatusButton){
             golgiApparatusPanelDescription.setVisible(true);
         }
         if(e.getSource()==golgiApparatusPanelClose){
+            if(!golgiApparatusLabelGreen.isVisible()){
+                progressBar.setValue(i=i+11);
+            }
             golgiApparatusPanelDescription.setVisible(false);
             golgiApparatusLabel.setVisible(false);
             golgiApparatusLabelGreen.setVisible(true);
             golgiApparatusLabelGreen.setOpaque(true);
             golgiApparatusPanel.add(golgiApparatusLabelGreen);
+        }
+        if(e.getSource()==golgiApparatus1){
+            golgiApparatusPanelDescription.setVisible(true);
         }
     }
 }

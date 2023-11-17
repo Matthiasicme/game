@@ -119,24 +119,20 @@ public class Baccell extends JFrame implements ActionListener {
         label.setIcon(background);
 
         Border border = BorderFactory.createLineBorder(Color.BLUE, 1);
-        Border bb = BorderFactory.createLineBorder(Color.RED, 1);
 
         progressBar.setValue(0);
         progressBar.setBounds(390,120,500,50);
         progressBar.setStringPainted(true);
-        //progressBar.setString("Level");
         progressBar.setBorderPainted(true);
         progressBar.setBorder(border);
         progressBar.setForeground(Color.green);
         progressBar.setBackground(Color.RED);
-        //progressBar.setOrientation(JProgressBar.VERTICAL);
 
         fimbriaePanel = new JPanel();
         fimbriaePanel.setVisible(true);
         fimbriaePanel.setBounds(930,190,280,40);
         fimbriaePanel.setLayout(new BorderLayout());
         fimbriaePanel.setBackground(new Color(0x6af6be));
-        //fimbriaePanel.setBorder(border);
 
         fimbriaeLabel = new JLabel();
         fimbriaeLabel.setBounds(0, 0, 200, 100);
@@ -166,7 +162,6 @@ public class Baccell extends JFrame implements ActionListener {
         fimbriaePanelDescription.setBounds(230,190,700,250);
         fimbriaePanelDescription.setLayout(new BorderLayout());
         fimbriaePanelDescription.setBackground(Color.cyan);
-        //fimbriaePanelDescription.setBorder(border);
 
         fimbriaeLabelDescription = new JLabel();
         fimbriaeLabelDescription.setVerticalAlignment(JLabel.CENTER);
@@ -207,7 +202,6 @@ public class Baccell extends JFrame implements ActionListener {
         nucleoidPanel.setBounds(930,230,280,40);
         nucleoidPanel.setLayout(new BorderLayout());
         nucleoidPanel.setBackground(new Color(0x6af6be));
-        //nucleoidPanel.setBorder(border);
 
         nucleoidLabel = new JLabel();
         nucleoidLabel.setBounds(0, 0, 200, 100);
@@ -237,7 +231,6 @@ public class Baccell extends JFrame implements ActionListener {
         nucleoidPanelDescription.setBounds(230,190,700,250);
         nucleoidPanelDescription.setLayout(new BorderLayout());
         nucleoidPanelDescription.setBackground(Color.cyan);
-        //nucleoidPanelDescription.setBorder(border);
 
         nucleoidLabelDescription = new JLabel();
         nucleoidLabelDescription.setVerticalAlignment(JLabel.CENTER);
@@ -269,7 +262,6 @@ public class Baccell extends JFrame implements ActionListener {
         ribosomesPanel.setBounds(930,270,280,40);
         ribosomesPanel.setLayout(new BorderLayout());
         ribosomesPanel.setBackground(new Color(0x6af6be));
-        //ribosomesPanel.setBorder(border);
 
         ribosomesLabel = new JLabel();
         ribosomesLabel.setBounds(0, 0, 200, 100);
@@ -299,7 +291,6 @@ public class Baccell extends JFrame implements ActionListener {
         ribosomesPanelDescription.setBounds(230,190,700,250);
         ribosomesPanelDescription.setLayout(new BorderLayout());
         ribosomesPanelDescription.setBackground(Color.cyan);
-        //ribosomesPanelDescription.setBorder(border);
 
         ribosomesLabelDescription = new JLabel();
         ribosomesLabelDescription.setVerticalAlignment(JLabel.CENTER);
@@ -420,7 +411,6 @@ public class Baccell extends JFrame implements ActionListener {
         plasmaMembranePanel.setBounds(930,310,280,40);
         plasmaMembranePanel.setLayout(new BorderLayout());
         plasmaMembranePanel.setBackground(new Color(0x6af6be));
-        //plasmaMembranePanel.setBorder(border);
 
         plasmaMembraneLabel = new JLabel();
         plasmaMembraneLabel.setBounds(0, 0, 200, 100);
@@ -450,7 +440,6 @@ public class Baccell extends JFrame implements ActionListener {
         plasmaMembranePanelDescription.setBounds(230,190,700,250);
         plasmaMembranePanelDescription.setLayout(new BorderLayout());
         plasmaMembranePanelDescription.setBackground(Color.cyan);
-        //plasmaMembranePanelDescription.setBorder(border);
 
         plasmaMembraneLabelDescription = new JLabel();
         plasmaMembraneLabelDescription.setVerticalAlignment(JLabel.CENTER);
@@ -476,7 +465,6 @@ public class Baccell extends JFrame implements ActionListener {
         cellWallPanel.setBounds(930,350,280,40);
         cellWallPanel.setLayout(new BorderLayout());
         cellWallPanel.setBackground(new Color(0x6af6be));
-        //cellWallPanel.setBorder(border);
 
         cellWallLabel = new JLabel();
         cellWallLabel.setBounds(0, 0, 200, 100);
@@ -506,7 +494,6 @@ public class Baccell extends JFrame implements ActionListener {
         cellWallPanelDescription.setBounds(230,190,700,250);
         cellWallPanelDescription.setLayout(new BorderLayout());
         cellWallPanelDescription.setBackground(Color.cyan);
-        //cellWallPanelDescription.setBorder(border);
 
         cellWallLabelDescription = new JLabel();
         cellWallLabelDescription.setVerticalAlignment(JLabel.CENTER);
@@ -530,7 +517,6 @@ public class Baccell extends JFrame implements ActionListener {
         plasmidPanel.setBounds(930,390,280,40);
         plasmidPanel.setLayout(new BorderLayout());
         plasmidPanel.setBackground(new Color(0x6af6be));
-        //plasmidPanel.setBorder(border);
 
         plasmidLabel = new JLabel();
         plasmidLabel.setBounds(0, 0, 200, 100);
@@ -560,7 +546,6 @@ public class Baccell extends JFrame implements ActionListener {
         plasmidPanelDescription.setBounds(230,190,700,250);
         plasmidPanelDescription.setLayout(new BorderLayout());
         plasmidPanelDescription.setBackground(Color.cyan);
-        //plasmidPanelDescription.setBorder(border);
 
         plasmidLabelDescription = new JLabel();
         plasmidLabelDescription.setVerticalAlignment(JLabel.CENTER);
@@ -594,7 +579,6 @@ public class Baccell extends JFrame implements ActionListener {
         cellulosePanel.setBounds(930,430,280,40);
         cellulosePanel.setLayout(new BorderLayout());
         cellulosePanel.setBackground(new Color(0x6af6be));
-        //cellulosePanel.setBorder(border);
 
         celluloseLabel = new JLabel();
         celluloseLabel.setBounds(0, 0, 200, 100);
@@ -624,7 +608,6 @@ public class Baccell extends JFrame implements ActionListener {
         cellulosePanelDescription.setBounds(230,190,700,250);
         cellulosePanelDescription.setLayout(new BorderLayout());
         cellulosePanelDescription.setBackground(Color.cyan);
-        //cellulosePanelDescription.setBorder(border);
 
         celluloseLabelDescription = new JLabel();
         celluloseLabelDescription.setVerticalAlignment(JLabel.CENTER);
@@ -649,7 +632,6 @@ public class Baccell extends JFrame implements ActionListener {
         capsulePanel.setBounds(930,470,280,40);
         capsulePanel.setLayout(new BorderLayout());
         capsulePanel.setBackground(new Color(0x6af6be));
-        //capsulePanel.setBorder(border);
 
         capsuleLabel = new JLabel();
         capsuleLabel.setBounds(0, 0, 200, 100);
@@ -679,7 +661,6 @@ public class Baccell extends JFrame implements ActionListener {
         capsulePanelDescription.setBounds(230,190,700,250);
         capsulePanelDescription.setLayout(new BorderLayout());
         capsulePanelDescription.setBackground(Color.cyan);
-        //capsulePanelDescription.setBorder(border);
 
         capsuleLabelDescription = new JLabel();
         capsuleLabelDescription.setVerticalAlignment(JLabel.CENTER);
@@ -744,7 +725,6 @@ public class Baccell extends JFrame implements ActionListener {
         flagellaPanel.setBounds(930,510,280,40);
         flagellaPanel.setLayout(new BorderLayout());
         flagellaPanel.setBackground(new Color(0x6af6be));
-        //flagellaPanel.setBorder(border);
 
         flagellaLabel = new JLabel();
         flagellaLabel.setBounds(0, 0, 200, 100);
@@ -774,7 +754,6 @@ public class Baccell extends JFrame implements ActionListener {
         flagellaPanelDescription.setBounds(230,190,700,250);
         flagellaPanelDescription.setLayout(new BorderLayout());
         flagellaPanelDescription.setBackground(Color.cyan);
-        //flagellaPanelDescription.setBorder(border);
 
         flagellaLabelDescription = new JLabel();
         flagellaLabelDescription.setVerticalAlignment(JLabel.CENTER);

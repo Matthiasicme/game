@@ -175,19 +175,16 @@ public class Placell extends JFrame implements ActionListener {
         progressBar.setValue(0);
         progressBar.setBounds(390,120,500,50);
         progressBar.setStringPainted(true);
-        //progressBar.setString("Level");
         progressBar.setBorderPainted(true);
         progressBar.setBorder(border);
         progressBar.setForeground(Color.green);
         progressBar.setBackground(Color.RED);
-        //progressBar.setOrientation(JProgressBar.VERTICAL);
 
         nucleusPanel = new JPanel();
         nucleusPanel.setVisible(true);
         nucleusPanel.setBounds(930,190,250,40);
         nucleusPanel.setLayout(new BorderLayout());
         nucleusPanel.setBackground(new Color(0x6af6be));
-        //nucleusPanel.setBorder(border);
 
         nucleusLabel = new JLabel();
         nucleusLabel.setBounds(0, 0, 200, 100);
@@ -217,7 +214,6 @@ public class Placell extends JFrame implements ActionListener {
         nucleusPanelDescription.setBounds(230,190,700,250);
         nucleusPanelDescription.setLayout(new BorderLayout());
         nucleusPanelDescription.setBackground(Color.cyan);
-        //nucleusPanelDescription.setBorder(border);
 
         nucleusLabelDescription = new JLabel();
         nucleusLabelDescription.setVerticalAlignment(JLabel.CENTER);
@@ -280,7 +276,6 @@ public class Placell extends JFrame implements ActionListener {
         mitochondrionPanelDescription.setBounds(230,190,700,250);
         mitochondrionPanelDescription.setLayout(new BorderLayout());
         mitochondrionPanelDescription.setBackground(Color.cyan);
-        //mitochondrionPanelDescription.setBorder(border);
 
         mitochondrionLabelDescription = new JLabel();
         mitochondrionLabelDescription.setVerticalAlignment(JLabel.CENTER);
@@ -337,7 +332,6 @@ public class Placell extends JFrame implements ActionListener {
         ribosomesPanel.setBounds(930,270,250,40);
         ribosomesPanel.setLayout(new BorderLayout());
         ribosomesPanel.setBackground(new Color(0x6af6be));
-        //ribosomesPanel.setBorder(border);
 
         ribosomesLabel = new JLabel();
         ribosomesLabel.setBounds(0, 0, 200, 100);
@@ -367,7 +361,6 @@ public class Placell extends JFrame implements ActionListener {
         ribosomesPanelDescription.setBounds(230,190,700,250);
         ribosomesPanelDescription.setLayout(new BorderLayout());
         ribosomesPanelDescription.setBackground(Color.cyan);
-        //ribosomesPanelDescription.setBorder(border);
 
         ribosomesLabelDescription = new JLabel();
         ribosomesLabelDescription.setVerticalAlignment(JLabel.CENTER);
@@ -496,7 +489,6 @@ public class Placell extends JFrame implements ActionListener {
         plasmaMembranePanel.setBounds(930,310,250,40);
         plasmaMembranePanel.setLayout(new BorderLayout());
         plasmaMembranePanel.setBackground(new Color(0x6af6be));
-        //plasmaMembranePanel.setBorder(border);
 
         plasmaMembraneLabel = new JLabel();
         plasmaMembraneLabel.setBounds(0, 0, 200, 100);
@@ -526,7 +518,6 @@ public class Placell extends JFrame implements ActionListener {
         plasmaMembranePanelDescription.setBounds(230,190,700,250);
         plasmaMembranePanelDescription.setLayout(new BorderLayout());
         plasmaMembranePanelDescription.setBackground(Color.cyan);
-        //plasmaMembranePanelDescription.setBorder(border);
 
         plasmaMembraneLabelDescription = new JLabel();
         plasmaMembraneLabelDescription.setVerticalAlignment(JLabel.CENTER);
@@ -551,7 +542,6 @@ public class Placell extends JFrame implements ActionListener {
         cellWallPanel.setBounds(930,350,250,40);
         cellWallPanel.setLayout(new BorderLayout());
         cellWallPanel.setBackground(new Color(0x6af6be));
-        //cellWallPanel.setBorder(border);
 
         cellWallLabel = new JLabel();
         cellWallLabel.setBounds(0, 0, 200, 100);
@@ -581,7 +571,6 @@ public class Placell extends JFrame implements ActionListener {
         cellWallPanelDescription.setBounds(230,190,700,250);
         cellWallPanelDescription.setLayout(new BorderLayout());
         cellWallPanelDescription.setBackground(Color.cyan);
-        //cellWallPanelDescription.setBorder(border);
 
         cellWallLabelDescription = new JLabel();
         cellWallLabelDescription.setVerticalAlignment(JLabel.CENTER);
@@ -679,7 +668,6 @@ public class Placell extends JFrame implements ActionListener {
         vacuolePanel.setBounds(930,390,250,40);
         vacuolePanel.setLayout(new BorderLayout());
         vacuolePanel.setBackground(new Color(0x6af6be));
-        //vacuolePanel.setBorder(border);
 
         vacuoleLabel = new JLabel();
         vacuoleLabel.setBounds(0, 0, 200, 100);
@@ -709,7 +697,6 @@ public class Placell extends JFrame implements ActionListener {
         vacuolePanelDescription.setBounds(230,190,700,250);
         vacuolePanelDescription.setLayout(new BorderLayout());
         vacuolePanelDescription.setBackground(Color.cyan);
-        //vacuolePanelDescription.setBorder(border);
 
         vacuoleLabelDescription = new JLabel();
         vacuoleLabelDescription.setVerticalAlignment(JLabel.CENTER);
@@ -759,7 +746,6 @@ public class Placell extends JFrame implements ActionListener {
         cellulosePanel.setBounds(930,430,250,40);
         cellulosePanel.setLayout(new BorderLayout());
         cellulosePanel.setBackground(new Color(0x6af6be));
-        //cellulosePanel.setBorder(border);
 
         celluloseLabel = new JLabel();
         celluloseLabel.setBounds(0, 0, 200, 100);
@@ -789,7 +775,6 @@ public class Placell extends JFrame implements ActionListener {
         cellulosePanelDescription.setBounds(230,190,700,250);
         cellulosePanelDescription.setLayout(new BorderLayout());
         cellulosePanelDescription.setBackground(Color.cyan);
-        //cellulosePanelDescription.setBorder(border);
 
         celluloseLabelDescription = new JLabel();
         celluloseLabelDescription.setVerticalAlignment(JLabel.CENTER);
@@ -815,7 +800,6 @@ public class Placell extends JFrame implements ActionListener {
         roughEndoplasmicReticulumPanel.setBounds(930,470,250,40);
         roughEndoplasmicReticulumPanel.setLayout(new BorderLayout());
         roughEndoplasmicReticulumPanel.setBackground(new Color(0x6af6be));
-        //roughEndoplasmicReticulumPanel.setBorder(border);
 
         roughEndoplasmicReticulumLabel = new JLabel();
         roughEndoplasmicReticulumLabel.setBounds(0, 0, 200, 100);
@@ -845,7 +829,6 @@ public class Placell extends JFrame implements ActionListener {
         roughEndoplasmicReticulumPanelDescription.setBounds(230,190,700,250);
         roughEndoplasmicReticulumPanelDescription.setLayout(new BorderLayout());
         roughEndoplasmicReticulumPanelDescription.setBackground(Color.cyan);
-        //roughEndoplasmicReticulumPanelDescription.setBorder(border);
 
         roughEndoplasmicReticulumLabelDescription = new JLabel();
         roughEndoplasmicReticulumLabelDescription.setVerticalAlignment(JLabel.CENTER);
@@ -894,7 +877,6 @@ public class Placell extends JFrame implements ActionListener {
         golgiApparatusPanel.setBounds(930,510,250,40);
         golgiApparatusPanel.setLayout(new BorderLayout());
         golgiApparatusPanel.setBackground(new Color(0x6af6be));
-        //golgiApparatusPanel.setBorder(border);
 
         golgiApparatusLabel = new JLabel();
         golgiApparatusLabel.setBounds(0, 0, 200, 100);
@@ -924,7 +906,6 @@ public class Placell extends JFrame implements ActionListener {
         golgiApparatusPanelDescription.setBounds(230,190,700,250);
         golgiApparatusPanelDescription.setLayout(new BorderLayout());
         golgiApparatusPanelDescription.setBackground(Color.cyan);
-        //golgiApparatusPanelDescription.setBorder(border);
 
         golgiApparatusLabelDescription = new JLabel();
         golgiApparatusLabelDescription.setVerticalAlignment(JLabel.CENTER);
@@ -973,7 +954,6 @@ public class Placell extends JFrame implements ActionListener {
         cytoskeletonPanel.setBounds(930,550,250,40);
         cytoskeletonPanel.setLayout(new BorderLayout());
         cytoskeletonPanel.setBackground(new Color(0x6af6be));
-        //cytoskeletonPanel.setBorder(border);
 
         cytoskeletonLabel = new JLabel();
         cytoskeletonLabel.setBounds(0, 0, 200, 100);
@@ -1003,7 +983,6 @@ public class Placell extends JFrame implements ActionListener {
         cytoskeletonPanelDescription.setBounds(230,190,700,250);
         cytoskeletonPanelDescription.setLayout(new BorderLayout());
         cytoskeletonPanelDescription.setBackground(Color.cyan);
-        //cytoskeletonPanelDescription.setBorder(border);
 
         cytoskeletonLabelDescription = new JLabel();
         cytoskeletonLabelDescription.setVerticalAlignment(JLabel.CENTER);
@@ -1046,7 +1025,6 @@ public class Placell extends JFrame implements ActionListener {
         peroxisomePanel.setBounds(930,590,250,40);
         peroxisomePanel.setLayout(new BorderLayout());
         peroxisomePanel.setBackground(new Color(0x6af6be));
-        //peroxisomePanel.setBorder(border);
 
         peroxisomeLabel = new JLabel();
         peroxisomeLabel.setBounds(0, 0, 200, 100);
@@ -1076,7 +1054,6 @@ public class Placell extends JFrame implements ActionListener {
         peroxisomePanelDescription.setBounds(230,190,700,250);
         peroxisomePanelDescription.setLayout(new BorderLayout());
         peroxisomePanelDescription.setBackground(Color.cyan);
-        //peroxisomePanelDescription.setBorder(border);
 
         peroxisomeLabelDescription = new JLabel();
         peroxisomeLabelDescription.setVerticalAlignment(JLabel.CENTER);
@@ -1134,7 +1111,6 @@ public class Placell extends JFrame implements ActionListener {
         plasmodesmataPanel.setBounds(930,630,250,40);
         plasmodesmataPanel.setLayout(new BorderLayout());
         plasmodesmataPanel.setBackground(new Color(0x6af6be));
-        //plasmodesmataPanel.setBorder(border);
 
         plasmodesmataLabel = new JLabel();
         plasmodesmataLabel.setBounds(0, 0, 200, 100);
@@ -1164,7 +1140,6 @@ public class Placell extends JFrame implements ActionListener {
         plasmodesmataPanelDescription.setBounds(230,190,700,250);
         plasmodesmataPanelDescription.setLayout(new BorderLayout());
         plasmodesmataPanelDescription.setBackground(Color.cyan);
-        //plasmodesmataPanelDescription.setBorder(border);
 
         plasmodesmataLabelDescription = new JLabel();
         plasmodesmataLabelDescription.setVerticalAlignment(JLabel.CENTER);
@@ -1206,7 +1181,6 @@ public class Placell extends JFrame implements ActionListener {
         chloroplastPanel.setBounds(930,670,250,40);
         chloroplastPanel.setLayout(new BorderLayout());
         chloroplastPanel.setBackground(new Color(0x6af6be));
-        //chloroplastPanel.setBorder(border);
 
         chloroplastLabel = new JLabel();
         chloroplastLabel.setBounds(0, 0, 200, 100);
@@ -1236,7 +1210,6 @@ public class Placell extends JFrame implements ActionListener {
         chloroplastPanelDescription.setBounds(230,190,700,250);
         chloroplastPanelDescription.setLayout(new BorderLayout());
         chloroplastPanelDescription.setBackground(Color.cyan);
-        //chloroplastPanelDescription.setBorder(border);
 
         chloroplastLabelDescription = new JLabel();
         chloroplastLabelDescription.setVerticalAlignment(JLabel.CENTER);

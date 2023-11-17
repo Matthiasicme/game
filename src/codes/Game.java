@@ -1122,7 +1122,7 @@ String pass;
             wynik6.setVisible(true);
         }
         if (Fe.isEnabled() && CO2.isEnabled()){
-            Probowkinielaczasie probowkinielaczasie = new Probowkinielaczasie();
+            Error_of_connections errorofconnections = new Error_of_connections();
             Fe.setEnabled(false);
         }
 
@@ -1142,7 +1142,7 @@ String pass;
             wynik11.setVisible(true);
         }
         if (Zn.isEnabled() && CO2.isEnabled()){
-            Probowkinielaczasie probowkinielaczasie = new Probowkinielaczasie();
+            Error_of_connections errorofconnections = new Error_of_connections();
             Zn.setEnabled(false);
         }
 
@@ -1214,18 +1214,18 @@ String pass;
             wynik32.setVisible(true);
         }
         if(H2SO4.isEnabled()&&CO2.isEnabled()){
-            Probowkinielaczasie probowkinielaczasie = new Probowkinielaczasie();
+            Error_of_connections errorofconnections = new Error_of_connections();
             H2SO4.setEnabled(false);
         }
         if (HCl.isEnabled()&&H2O.isEnabled()){
             wynik33.setVisible(true);
         }
         if (HCl.isEnabled()&&CO2.isEnabled()){
-            Probowkinielaczasie probowkinielaczasie = new Probowkinielaczasie();
+            Error_of_connections errorofconnections = new Error_of_connections();
             HCl.setEnabled(false);
         }
         if (HNO3.isEnabled()&&CO2.isEnabled()){
-            Probowkinielaczasie probowkinielaczasie = new Probowkinielaczasie();
+            Error_of_connections errorofconnections = new Error_of_connections();
             HNO3.setEnabled(false);
         }
         if (HNO3.isEnabled()&&H2O.isEnabled()){
@@ -1347,58 +1347,59 @@ String pass;
 }
 
 
-//wszystkie możliwe reakcje
+/**
+ wszystkie możliwe reakcje
 
-//        1.	Fe + 2HCl → FeCl2 + H2 ↑
-//        2.	Fe + H2SO4 rozc.→ FeSO4 + H2 ↑
-//        3.	Fe + H2O → Fe3 O4  + H2 ↑
-//        4.	Fe + KOH = Fe(OH)3 + K
-//        5.	Fe + NaOH = Fe(OH)3 +Na
-//        6.	Fe + HNO3 = Fe(NO3)3+NO(gaz)+H2O
-//
-//        7.	Zn + 4 HNO3 → Zn(NO3)2 + 2 NO2 + 2 H20
-//        8.	ZnO+2HCl→ZnCl2+H2O
-//        9.	Zn+2NaOH−→Na2ZnO2+ H2 ↑
-//        10.	Zn+H2SO4→ZnSO4+ H2 ↑
-//        11.	Zn + 2KOH + 2H2O → K2(Zn(OH)4) + H2   //POTROJNA
-//
-//        12.	MnO2 + H2SO4 = Mn2O3 + O2
-//        13.	MnO2 + KOH = (pod wpływem tlenu) = K2MnO4 + 2 H20
-//        14.	3MnO2 + 4H2O → 3Mn(OH)2 + 2HO2
-//        15.	MnO2 + NaOH = (pod wpływem tlenu) = Na2MnO4 + 2 H20
-//        16.	MnO2 + HNO3 = Mn(NO3)2 +H2O +O2
-//        17.	 MnO 2 + HCl → MnCl 2 + H 2 O + Cl 2.
-//        18.	MnO2+CO2=Mn(CO3)2
-//
-//        19.	2Al+6HCl→2AlCl3+3H2↑
-//        20.	2Al+2NaOH+6H2O→2Na[Al(OH)4]+3H2↑     //POTROJNA
-//        21.	8Al+27HNO3→8Al(NO3)3+3NH3+9H2O
-//        22.	2Al+6H2SO4→Al2(SO4)3+3SO2↑+6H2O
-//        23.	Al + CO2 = AlO + CO
-//        24.	2Al + 6KOH + 6H2O → 2K3(Al(OH)6) + 3H2  //POTROJNA
-//
-//        25.	Mg + H₂O → MgO + H₂ ↑
-//        26.	Mg + H2SO4 ------------->  MgSO4 + H2
-//        27.	2Mg + CO2 --> 2MgO + C
-//        28.	Mg + 4HNO3 → Mg(NO3)2 + 2NO2 + 2H2O
-//        29.	Mg + 2NaOH → Mg(OH)2 + 2Na
-//        30.	Mg + 2KOH → Mg(OH)2 + 2K
-//        31.	Mg + HCl → MgCl 2 + H 2
-//
-//        32.	H2O +H2SO4 = H3O + SO4
-//        33.	2HCl + H2O → 2H2 + Cl2O
-//        34.	H20 + HNO3 = H2O + NO2
-//        35.	naoh+h2o=na(oh)2+h2
-//        36.	CO2 + H2O = H2CO3
-//
-//        37.	h2so4+naoh = Na2SO4 + H2O
-//        38.	hcl+naoh = NaCl + h2o
-//        39.	hno3+naoh = NaNO3 + H2O
-//        40.	hno3+koh = KNO3 + H2O
-//        41.	hcl+koh = kcl + h2o
-//        42.	h2so4 + koh = k2so4 + h20
-//
+        1.	Fe + 2HCl → FeCl2 + H2 ↑
+        2.	Fe + H2SO4 rozc.→ FeSO4 + H2 ↑
+        3.	Fe + H2O → Fe3 O4  + H2 ↑
+        4.	Fe + KOH = Fe(OH)3 + K
+        5.	Fe + NaOH = Fe(OH)3 +Na
+        6.	Fe + HNO3 = Fe(NO3)3+NO(gaz)+H2O
 
+        7.	Zn + 4 HNO3 → Zn(NO3)2 + 2 NO2 + 2 H20
+        8.	ZnO+2HCl→ZnCl2+H2O
+        9.	Zn+2NaOH−→Na2ZnO2+ H2 ↑
+        10.	Zn+H2SO4→ZnSO4+ H2 ↑
+        11.	Zn + 2KOH + 2H2O → K2(Zn(OH)4) + H2   triple
+
+        12.	MnO2 + H2SO4 = Mn2O3 + O2
+        13.	MnO2 + KOH = (pod wpływem tlenu) = K2MnO4 + 2 H20
+        14.	3MnO2 + 4H2O → 3Mn(OH)2 + 2HO2
+        15.	MnO2 + NaOH = (pod wpływem tlenu) = Na2MnO4 + 2 H20
+        16.	MnO2 + HNO3 = Mn(NO3)2 +H2O +O2
+        17.	 MnO 2 + HCl → MnCl 2 + H 2 O + Cl 2.
+        18.	MnO2+CO2=Mn(CO3)2
+
+        19.	2Al+6HCl→2AlCl3+3H2↑
+        20.	2Al+2NaOH+6H2O→2Na[Al(OH)4]+3H2↑     triple
+        21.	8Al+27HNO3→8Al(NO3)3+3NH3+9H2O
+        22.	2Al+6H2SO4→Al2(SO4)3+3SO2↑+6H2O
+        23.	Al + CO2 = AlO + CO
+        24.	2Al + 6KOH + 6H2O → 2K3(Al(OH)6) + 3H2  triple
+
+        25.	Mg + H₂O → MgO + H₂ ↑
+        26.	Mg + H2SO4 ------------->  MgSO4 + H2
+        27.	2Mg + CO2 --> 2MgO + C
+        28.	Mg + 4HNO3 → Mg(NO3)2 + 2NO2 + 2H2O
+        29.	Mg + 2NaOH → Mg(OH)2 + 2Na
+        30.	Mg + 2KOH → Mg(OH)2 + 2K
+        31.	Mg + HCl → MgCl 2 + H 2
+
+        32.	H2O +H2SO4 = H3O + SO4
+        33.	2HCl + H2O → 2H2 + Cl2O
+        34.	H20 + HNO3 = H2O + NO2
+        35.	naoh+h2o=na(oh)2+h2
+        36.	CO2 + H2O = H2CO3
+
+        37.	h2so4+naoh = Na2SO4 + H2O
+        38.	hcl+naoh = NaCl + h2o
+        39.	hno3+naoh = NaNO3 + H2O
+        40.	hno3+koh = KNO3 + H2O
+        41.	hcl+koh = kcl + h2o
+        42.	h2so4 + koh = k2so4 + h20
+
+**/
 
 
 
