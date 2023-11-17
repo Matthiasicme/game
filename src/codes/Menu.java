@@ -5,29 +5,6 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-/**
- *
- * Klasa Menu odpowiada za JFrame wyświetlany na początku włączenia gry, za menu gry.
- *
- * Znajdują się w niej przyciski:
- * play- odpowiedzialny za przejście do następnego okienka, gry
- * goBack- odpowiedzialny za zamykanie panelu info o autorze
- * htp- odpowiedzialny za uruchomienie panelu info o autorze
- * htpButton- odpowiedzialny za uruchomienie panelu porady
- * htpGoBack- odpowiedzialny za zamknięcie panelu porady
- * wyjdż- odpowiedzialny za zakończenie gry i zamknięcie menu
- *
- * Znajdują się w niej labele odpowiedzialne za:
- * infooautorzelabel- tekst w panelu infooautorze
- * htpLabel- tekst w panelu porady
- *
- * Oraz znajdują się w niej dwa panele:
- * infooautorze- panel z labelem infooautorzelabel i przyciskiem goBack
- * htpPanel- panel z labelem htpLabel i przyciskiem htpGoBack
- *
- * Klasa Menu zawiera konstruktor Menu oraz param e odpowiedzialny za akcje
- */
-
 public class Menu extends JFrame implements ActionListener {
 JButton play;
 JButton goBack;
@@ -39,14 +16,6 @@ JLabel htpLabel;
 JPanel htpPanel;
 String pass;
 
-    /**
-     *
-     * W konstruktorze Menu zapisany został nowy label odpowiedzialny za tło, parametry i właściwości paneli,
-     * przycisków i labeli z klasy Menu. zapisałem w nim również parametry tego frame-u i dodałem do niego
-     * wszystkie panele, labele i przyciski oraz logo znajdujące się na samym dole.
-     *
-     * @param
-     */
     public Menu(String pass) {
         this.pass = pass;
         ImageIcon background = new ImageIcon("src/resources/INTERFACE.png");
@@ -76,11 +45,16 @@ String pass;
 
         ImageIcon porzam = new ImageIcon("src/resources/porzam.png");
         htpLabel = new JLabel();
-        htpLabel.setText("<html>Oto kilka cennych wskazówek jak grać w SecretLab!<br/>1) prawie wszystko można " +
-                "łączyć z wodą<br/>2) wode włączysz klikając baniak<br/>3) kwasy " +
-                "i zasady dają sole<br/>4) przycisk cofania probówek jest na ladzie<br/>5) mieszaj ostrożnie, nie " +
-                "można przekraczyć 3 probówek jednocześnie, ani nie można wziąć 2 probówek z jednego rzędu," +
-                " zapewnione w celach bezpieczeństwa :D<br/>Są 42 poprawne kombinacje, a Ty? Znajdziesz je wszystkie? <html>");
+        htpLabel.setText("<html>\n" +
+                "    Here are some valuable tips on how to play SecretLab!<br/>\n" +
+                "    1) Almost everything can be combined with water<br/>\n" +
+                "    2) You can turn on the water by clicking on the barrel<br/>\n" +
+                "    3) Acids and bases yield salts<br/>\n" +
+                "    4) The test tube undo button is on the counter<br/>\n" +
+                "    5) Mix carefully; you cannot exceed 3 test tubes at once, nor can you take 2 test tubes from the same row, \n" +
+                "    ensured for safety purposes :D<br/>\n" +
+                "    There are 42 correct combinations, and you? Will you find them all?\n" +
+                "</html>\n");
         htpLabel.setForeground(Color.BLACK);
         htpLabel.setFont(new Font("Arial",Font.PLAIN,35));
         htpLabel.setVerticalAlignment(JLabel.CENTER);
@@ -116,10 +90,6 @@ String pass;
         this.setIconImage(logo.getImage());
     }
 
-    /**
-     * W param e zapisane zostały wszystkie akcje, za które odpowiedzialne są naciskane przyciski w JFrame.
-     * @param e
-     */
     @Override
     public void actionPerformed(ActionEvent e) {
         if(e.getSource()==play){

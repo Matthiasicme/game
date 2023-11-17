@@ -5,28 +5,6 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-/**
- *
- * Klasa Menu odpowiada za JFrame wyświetlany na początku włączenia gry, za menu gry.
- *
- * Znajdują się w niej przyciski:
- * play- odpowiedzialny za przejście do następnego okienka, gry
- * goBack- odpowiedzialny za zamykanie panelu info o autorze
- * htp- odpowiedzialny za uruchomienie panelu info o autorze
- * htpButton- odpowiedzialny za uruchomienie panelu porady
- * htpGoBack- odpowiedzialny za zamknięcie panelu porady
- * wyjdż- odpowiedzialny za zakończenie gry i zamknięcie menu
- *
- * Znajdują się w niej labele odpowiedzialne za:
- * infooautorzelabel- tekst w panelu infooautorze
- * htpLabel- tekst w panelu porady
- *
- * Oraz znajdują się w niej dwa panele:
- * infooautorze- panel z labelem infooautorzelabel i przyciskiem goBack
- * htpPanel- panel z labelem htpLabel i przyciskiem htpGoBack
- *
- * Klasa Menu zawiera konstruktor Menu oraz param e odpowiedzialny za akcje
- */
 
 public class Menubiol extends JFrame implements ActionListener {
     JButton funcell;
@@ -36,15 +14,6 @@ public class Menubiol extends JFrame implements ActionListener {
     JButton goBack;
     String pass;
 
-
-    /**
-     *
-     * W konstruktorze Menu zapisany został nowy label odpowiedzialny za tło, parametry i właściwości paneli,
-     * przycisków i labeli z klasy Menu. zapisałem w nim również parametry tego frame-u i dodałem do niego
-     * wszystkie panele, labele i przyciski oraz logo znajdujące się na samym dole.
-     *
-     * @param
-     */
     public Menubiol(String pass) {
         this.pass = pass;
         ImageIcon background = new ImageIcon("src/resources/BIOINTERFACE.png");
@@ -103,10 +72,6 @@ public class Menubiol extends JFrame implements ActionListener {
         this.setIconImage(logo.getImage());
     }
 
-    /**
-     * W param e zapisane zostały wszystkie akcje, za które odpowiedzialne są naciskane przyciski w JFrame.
-     * @param e
-     */
     @Override
     public void actionPerformed(ActionEvent e) {
         if(e.getSource()==baccell){

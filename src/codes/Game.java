@@ -6,17 +6,6 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-/**
- *
- * klasa Game odpowiada za sam gameplay
- * Zanjdują się w niej:
- * przyciski związków, przyciski  koncówka en odpowiedzialne za setEnable przycisków związków,
- * przyciski menu odpowiedzialny za powrót do menu i cofnij odpowiedzialny za resetowanie wybranych probówek.
- * labele np Felabel odpowiedzialne za pokazanie się probówki na ladzie
- * panele i labele z wynikami
- *
- * Klasa Game zawiera konstruktor Game oraz param e odpowiedzialny za akcje
- */
 public class Game extends JFrame implements ActionListener {
 JButton Fe;
 JButton Feen;
@@ -58,7 +47,7 @@ JLabel NaOHlabel;
 JLabel KOHlabel;
 JLabel CO2label;
 JLabel H2Olabel;
-    //WYNIKI
+
 JPanel wynik1;
 JLabel wynik1label;
 JPanel wynik2;
@@ -145,16 +134,9 @@ JPanel wynik42;
 JLabel wynik42label;
 String pass;
 
-    /**
-     *
-     * w konstruktorze Game zapisany został nowy label odpowiedzialny za tło, parametry i właściwości paneli,
-     * przycisków i labeli z klasy Game. Zapisałem w nim również parametry tego frame-u i dodałem do niego
-     * wszystkie panele, labele i przyciski oraz logo znajdujące się na samym dole.
-     */
     public Game(String pass){
         this.pass = pass;
 
-        //LABELE
 
         ImageIcon background = new ImageIcon("src/resources/scilab.png");
         JLabel label = new JLabel();
@@ -231,8 +213,6 @@ String pass;
         H2Olabel.setIcon(H2OP);
         H2Olabel.setBounds(188, 676, 114, 184);
         H2Olabel.setVisible(false);
-
-        //GUZIKI
 
         Fe = new JButton();
         Fe.setBounds(100,45,1,1);
@@ -427,8 +407,6 @@ String pass;
         menubutton.setBounds(1130,25,100,50);
         menubutton.setBorderPainted(false);
         menubutton.addActionListener(this);
-
-        //PANELE I LABELE WYNIKÓW
 
         wynik1 = new JPanel();
         wynik1.setVisible(false);
@@ -1029,12 +1007,6 @@ String pass;
 
     }
 
-    /**
-     * W param e zapisane zostały wszystkie akcje, za które odpowiedzialne są naciskane przyciski z końcówką en w JFrame,
-     * wyniki reakcji oraz co się stanie gdy probówki nie reagują, przycisk cofnij odpowiedzialny za cofanie wybranych
-     * probówek i menu odpowiedzialny za powrót do menu
-     * @param e
-     */
     @Override
     public void actionPerformed(ActionEvent e) {
         if(e.getSource()==Feen){

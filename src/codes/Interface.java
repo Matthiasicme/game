@@ -1,33 +1,9 @@
 package codes;
 
 import javax.swing.*;
-import javax.swing.border.Border;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
-/**
- *
- * Klasa Menu odpowiada za JFrame wyświetlany na początku włączenia gry, za menu gry.
- *
- * Znajdują się w niej przyciski:
- * graj- odpowiedzialny za przejście do następnego okienka, gry
- * zamknij- odpowiedzialny za zamykanie panelu info o autorze
- * IoA- odpowiedzialny za uruchomienie panelu info o autorze
- * poradybutton- odpowiedzialny za uruchomienie panelu porady
- * poradyzamknij- odpowiedzialny za zamknięcie panelu porady
- * wyjdż- odpowiedzialny za zakończenie gry i zamknięcie menu
- *
- * Znajdują się w niej labele odpowiedzialne za:
- * infooautorzelabel- tekst w panelu infooautorze
- * poradylabel- tekst w panelu porady
- *
- * Oraz znajdują się w niej dwa panele:
- * infooautorze- panel z labelem infooautorzelabel i przyciskiem zamknij
- * poradypanel- panel z labelem poradylabel i przyciskiem poradyzamknij
- *
- * Klasa Menu zawiera konstruktor Menu oraz param e odpowiedzialny za akcje
- */
 
 public class Interface extends JFrame implements ActionListener {
     JButton playbio;
@@ -35,15 +11,7 @@ public class Interface extends JFrame implements ActionListener {
     JButton close;
     JLabel introduction;
     JPanel intro;
-    //String name = JOptionPane.showInputDialog(null, "Hello, what is your name?", "Introduce Yourself", JOptionPane.QUESTION_MESSAGE);
 
-    /**
-     *
-     * W konstruktorze Menu zapisany został nowy label odpowiedzialny za tło, parametry i właściwości paneli,
-     * przycisków i labeli z klasy Menu. zapisałem w nim również parametry tego frame-u i dodałem do niego
-     * wszystkie panele, labele i przyciski oraz logo znajdujące się na samym dole.
-     *
-     */
     boolean nameInput = false;
     public String name;
     String username;
@@ -109,10 +77,6 @@ public class Interface extends JFrame implements ActionListener {
         this.setIconImage(logo.getImage());
     }
 
-    /**
-     * W param e zapisane zostały wszystkie akcje, za które odpowiedzialne są naciskane przyciski w JFrame.
-     * @param e
-     */
     @Override
     public void actionPerformed(ActionEvent e) {
         if(e.getSource()==playbio){
